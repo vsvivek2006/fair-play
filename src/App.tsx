@@ -1,12 +1,16 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageRenderer from '@/components/PageRenderer';
 import SEO from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
+import StickyBottomNav from '@/components/StickyBottomNav';
+import HomePage from '@/pages/HomePage';
+import { AuthModalProvider } from '@/context/AuthModalContext';
+import AuthModal from '@/components/AuthModal';
+import ScrollToTop from '@/components/ScrollToTop';
 
 import {
-  homePage,
   aboutPage,
   contactPage,
   faqPage,
@@ -95,20 +99,24 @@ function NotFound() {
   return (
     <>
       <SEO
-        title="Page Not Found"
-        description="The page you are looking for does not exist. Browse our sitemap to find what you need."
+        title="Page Not Found | Fairplay"
+        description="The page you are looking for does not exist. Browse our sitemap or return to homepage."
         canonical="/404/"
       />
-      <div className="max-w-2xl mx-auto px-4 py-20 text-center">
-        <h1 className="text-4xl font-bold text-slate-900 mb-4">Page Not Found</h1>
-        <p className="text-lg text-slate-600 mb-8">
-          The page you are looking for does not exist or has been moved. Try browsing our sitemap to find what you need.
+      <div className="max-w-2xl mx-auto px-4 py-32 text-center">
+        <div className="w-20 h-20 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] text-3xl mx-auto flex items-center justify-center mb-6">
+          <i className="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h1 className="text-3xl sm:text-5xl font-bold font-serif text-white mb-4">404 — Page Not Found</h1>
+        <p className="text-slate-400 text-sm sm:text-base mb-8 max-w-md mx-auto">
+          The page you are looking for does not exist or has been relocated. Explore our guides or return to homepage.
         </p>
         <Link
-          to="/sitemap/"
-          className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
+          to="/"
+          className="btn btn-gold text-xs sm:text-sm px-6 py-3 font-bold inline-flex items-center gap-2"
         >
-          View Sitemap
+          <i className="fa-solid fa-house"></i>
+          <span>Return to Homepage</span>
         </Link>
       </div>
     </>
@@ -117,95 +125,103 @@ function NotFound() {
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <Header />
-      <main className="flex-1">
-        <Routes>
-          {/* Core Pages */}
-          <Route path="/" element={<PageRenderer data={homePage} />} />
-          <Route path="/about/" element={<PageRenderer data={aboutPage} />} />
-          <Route path="/contact/" element={<PageRenderer data={contactPage} />} />
-          <Route path="/faq/" element={<PageRenderer data={faqPage} />} />
-          <Route path="/help/" element={<PageRenderer data={helpCenterPage} />} />
-          <Route path="/sitemap/" element={<PageRenderer data={sitemapPage} />} />
-          <Route path="/editorial-policy/" element={<PageRenderer data={editorialPolicyPage} />} />
-          <Route path="/accessibility/" element={<PageRenderer data={accessibilityPage} />} />
+    <AuthModalProvider>
+      <ScrollToTop />
+      <div className="min-h-screen flex flex-col bg-[#0a0d14] text-white">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            {/* Homepage with all target luxury components */}
+            <Route path="/" element={<HomePage />} />
 
-          {/* Fairplay Main Topic */}
-          <Route path="/fairplay/" element={<PageRenderer data={fairplayHubPage} />} />
-          <Route path="/fairplay-guide/" element={<PageRenderer data={fairplayGuidePage} />} />
-          <Route path="/fairplay-features/" element={<PageRenderer data={fairplayFeaturesPage} />} />
-          <Route path="/fairplay-overview/" element={<PageRenderer data={fairplayOverviewPage} />} />
-          <Route path="/fairplay-2026/" element={<PageRenderer data={fairplay2026Page} />} />
-          <Route path="/fairplay-online/" element={<PageRenderer data={fairplayOnlinePage} />} />
-          <Route path="/my-fairplay/" element={<PageRenderer data={myFairplayPage} />} />
-          <Route path="/fairplay-pro/" element={<PageRenderer data={fairplayProPage} />} />
-          <Route path="/fairplay-24/" element={<PageRenderer data={fairplay24Page} />} />
-          <Route path="/fairplay-club/" element={<PageRenderer data={fairplayClubPage} />} />
-          <Route path="/fairplay-global/" element={<PageRenderer data={fairplayGlobalPage} />} />
-          <Route path="/fairplay-website/" element={<PageRenderer data={fairplayWebsitePage} />} />
-          <Route path="/fairplay-mobile/" element={<PageRenderer data={fairplayMobilePage} />} />
-          <Route path="/fairplay-updates/" element={<PageRenderer data={fairplayUpdatesPage} />} />
+            {/* Core Pages */}
+            <Route path="/about/" element={<PageRenderer data={aboutPage} />} />
+            <Route path="/contact/" element={<PageRenderer data={contactPage} />} />
+            <Route path="/faq/" element={<PageRenderer data={faqPage} />} />
+            <Route path="/help/" element={<PageRenderer data={helpCenterPage} />} />
+            <Route path="/sitemap/" element={<PageRenderer data={sitemapPage} />} />
+            <Route path="/editorial-policy/" element={<PageRenderer data={editorialPolicyPage} />} />
+            <Route path="/accessibility/" element={<PageRenderer data={accessibilityPage} />} />
 
-          {/* App / Download Cluster */}
-          <Route path="/fairplay-app/" element={<PageRenderer data={fairplayAppPage} />} />
-          <Route path="/fairplay-app-guide/" element={<PageRenderer data={fairplayAppGuidePage} />} />
-          <Route path="/fairplay-download/" element={<PageRenderer data={fairplayDownloadPage} />} />
-          <Route path="/fairplay-download-guide/" element={<PageRenderer data={fairplayDownloadGuidePage} />} />
-          <Route path="/fairplay-apk/" element={<PageRenderer data={fairplayAPKPage} />} />
-          <Route path="/fairplay-apk-guide/" element={<PageRenderer data={fairplayAPKGuidePage} />} />
-          <Route path="/fairplay-apk-installation/" element={<PageRenderer data={fairplayAPKInstallationPage} />} />
-          <Route path="/fairplay-app-installation/" element={<PageRenderer data={fairplayAppInstallationPage} />} />
-          <Route path="/fairplay-latest-version/" element={<PageRenderer data={fairplayLatestVersionPage} />} />
-          <Route path="/fairplay-app-updates/" element={<PageRenderer data={fairplayAppUpdatesPage} />} />
-          <Route path="/fairplay-mobile-app/" element={<PageRenderer data={fairplayMobileAppGuidePage} />} />
-          <Route path="/fairplay-app-features/" element={<PageRenderer data={fairplayAppFeaturesPage} />} />
+            {/* Fairplay Main Topic */}
+            <Route path="/fairplay/" element={<PageRenderer data={fairplayHubPage} />} />
+            <Route path="/fairplay-guide/" element={<PageRenderer data={fairplayGuidePage} />} />
+            <Route path="/fairplay-features/" element={<PageRenderer data={fairplayFeaturesPage} />} />
+            <Route path="/fairplay-overview/" element={<PageRenderer data={fairplayOverviewPage} />} />
+            <Route path="/fairplay-2026/" element={<PageRenderer data={fairplay2026Page} />} />
+            <Route path="/fairplay-online/" element={<PageRenderer data={fairplayOnlinePage} />} />
+            <Route path="/my-fairplay/" element={<PageRenderer data={myFairplayPage} />} />
+            <Route path="/fairplay-pro/" element={<PageRenderer data={fairplayProPage} />} />
+            <Route path="/fairplay-24/" element={<PageRenderer data={fairplay24Page} />} />
+            <Route path="/fairplay-club/" element={<PageRenderer data={fairplayClubPage} />} />
+            <Route path="/fairplay-global/" element={<PageRenderer data={fairplayGlobalPage} />} />
+            <Route path="/fairplay-website/" element={<PageRenderer data={fairplayWebsitePage} />} />
+            <Route path="/fairplay-mobile/" element={<PageRenderer data={fairplayMobilePage} />} />
+            <Route path="/fairplay-updates/" element={<PageRenderer data={fairplayUpdatesPage} />} />
 
-          {/* Login / Account Cluster */}
-          <Route path="/fairplay-login/" element={<PageRenderer data={fairplayLoginPage} />} />
-          <Route path="/fairplay-login-guide/" element={<PageRenderer data={fairplayLoginGuidePage} />} />
-          <Route path="/fairplay-register/" element={<PageRenderer data={fairplayRegisterPage} />} />
-          <Route path="/fairplay-registration-guide/" element={<PageRenderer data={fairplayRegistrationGuidePage} />} />
-          <Route path="/fairplay-account/" element={<PageRenderer data={fairplayAccountPage} />} />
-          <Route path="/fairplay-password-help/" element={<PageRenderer data={fairplayPasswordHelpPage} />} />
-          <Route path="/fairplay-login-troubleshooting/" element={<PageRenderer data={fairplayLoginTroubleshootingPage} />} />
-          <Route path="/fairplay-registration-help/" element={<PageRenderer data={fairplayRegistrationHelpPage} />} />
-          <Route path="/fairplay-account-security/" element={<PageRenderer data={fairplayAccountSecurityPage} />} />
+            {/* App / Download Cluster */}
+            <Route path="/fairplay-app/" element={<PageRenderer data={fairplayAppPage} />} />
+            <Route path="/fairplay-app-guide/" element={<PageRenderer data={fairplayAppGuidePage} />} />
+            <Route path="/fairplay-download/" element={<PageRenderer data={fairplayDownloadPage} />} />
+            <Route path="/fairplay-download-guide/" element={<PageRenderer data={fairplayDownloadGuidePage} />} />
+            <Route path="/fairplay-apk/" element={<PageRenderer data={fairplayAPKPage} />} />
+            <Route path="/fairplay-apk-guide/" element={<PageRenderer data={fairplayAPKGuidePage} />} />
+            <Route path="/fairplay-apk-installation/" element={<PageRenderer data={fairplayAPKInstallationPage} />} />
+            <Route path="/fairplay-app-installation/" element={<PageRenderer data={fairplayAppInstallationPage} />} />
+            <Route path="/fairplay-latest-version/" element={<PageRenderer data={fairplayLatestVersionPage} />} />
+            <Route path="/fairplay-app-updates/" element={<PageRenderer data={fairplayAppUpdatesPage} />} />
+            <Route path="/fairplay-mobile-app/" element={<PageRenderer data={fairplayMobileAppGuidePage} />} />
+            <Route path="/fairplay-app-features/" element={<PageRenderer data={fairplayAppFeaturesPage} />} />
 
-          {/* Guides / Information */}
-          <Route path="/how-fairplay-works/" element={<PageRenderer data={howFairplayWorksPage} />} />
-          <Route path="/fairplay-beginner-guide/" element={<PageRenderer data={fairplayBeginnerGuidePage} />} />
-          <Route path="/fairplay-user-guide/" element={<PageRenderer data={fairplayUserGuidePage} />} />
-          <Route path="/fairplay-mobile-guide/" element={<PageRenderer data={fairplayMobileGuidePage} />} />
-          <Route path="/fairplay-website-guide/" element={<PageRenderer data={fairplayWebsiteGuidePage} />} />
-          <Route path="/fairplay-features-guide/" element={<PageRenderer data={fairplayFeaturesGuidePage} />} />
-          <Route path="/fairplay-help-guide/" element={<PageRenderer data={fairplayHelpGuidePage} />} />
-          <Route path="/fairplay-troubleshooting/" element={<PageRenderer data={fairplayTroubleshootingPage} />} />
-          <Route path="/fairplay-common-questions/" element={<PageRenderer data={fairplayCommonQuestionsPage} />} />
-          <Route path="/fairplay-safety-guide/" element={<PageRenderer data={fairplaySafetyGuidePage} />} />
-          <Route path="/fairplay-responsible-use/" element={<PageRenderer data={fairplayResponsibleUsePage} />} />
+            {/* Login / Account Cluster */}
+            <Route path="/fairplay-login/" element={<PageRenderer data={fairplayLoginPage} />} />
+            <Route path="/fairplay-login-guide/" element={<PageRenderer data={fairplayLoginGuidePage} />} />
+            <Route path="/fairplay-register/" element={<PageRenderer data={fairplayRegisterPage} />} />
+            <Route path="/fairplay-registration-guide/" element={<PageRenderer data={fairplayRegistrationGuidePage} />} />
+            <Route path="/fairplay-account/" element={<PageRenderer data={fairplayAccountPage} />} />
+            <Route path="/fairplay-password-help/" element={<PageRenderer data={fairplayPasswordHelpPage} />} />
+            <Route path="/fairplay-login-troubleshooting/" element={<PageRenderer data={fairplayLoginTroubleshootingPage} />} />
+            <Route path="/fairplay-registration-help/" element={<PageRenderer data={fairplayRegistrationHelpPage} />} />
+            <Route path="/fairplay-account-security/" element={<PageRenderer data={fairplayAccountSecurityPage} />} />
 
-          {/* Sports / IPL Information */}
-          <Route path="/fairplay-sports/" element={<PageRenderer data={fairplaySportsPage} />} />
-          <Route path="/fairplay-ipl-2026/" element={<PageRenderer data={fairplayIPL2026Page} />} />
-          <Route path="/fairplay-ipl-guide/" element={<PageRenderer data={fairplayIPLGuidePage} />} />
-          <Route path="/fairplay-award-ipl-2026/" element={<PageRenderer data={fairplayAwardIPL2026Page} />} />
-          <Route path="/fairplay-sports-updates/" element={<PageRenderer data={fairplaySportsUpdatesPage} />} />
+            {/* Guides / Information */}
+            <Route path="/how-fairplay-works/" element={<PageRenderer data={howFairplayWorksPage} />} />
+            <Route path="/fairplay-beginner-guide/" element={<PageRenderer data={fairplayBeginnerGuidePage} />} />
+            <Route path="/fairplay-user-guide/" element={<PageRenderer data={fairplayUserGuidePage} />} />
+            <Route path="/fairplay-mobile-guide/" element={<PageRenderer data={fairplayMobileGuidePage} />} />
+            <Route path="/fairplay-website-guide/" element={<PageRenderer data={fairplayWebsiteGuidePage} />} />
+            <Route path="/fairplay-features-guide/" element={<PageRenderer data={fairplayFeaturesGuidePage} />} />
+            <Route path="/fairplay-help-guide/" element={<PageRenderer data={fairplayHelpGuidePage} />} />
+            <Route path="/fairplay-troubleshooting/" element={<PageRenderer data={fairplayTroubleshootingPage} />} />
+            <Route path="/fairplay-common-questions/" element={<PageRenderer data={fairplayCommonQuestionsPage} />} />
+            <Route path="/fairplay-safety-guide/" element={<PageRenderer data={fairplaySafetyGuidePage} />} />
+            <Route path="/fairplay-responsible-use/" element={<PageRenderer data={fairplayResponsibleUsePage} />} />
 
-          {/* Legal / Trust */}
-          <Route path="/privacy-policy/" element={<PageRenderer data={privacyPolicyPage} />} />
-          <Route path="/terms/" element={<PageRenderer data={termsPage} />} />
-          <Route path="/disclaimer/" element={<PageRenderer data={disclaimerPage} />} />
-          <Route path="/cookie-policy/" element={<PageRenderer data={cookiePolicyPage} />} />
-          <Route path="/security-policy/" element={<PageRenderer data={securityPolicyPage} />} />
-          <Route path="/responsible-use-policy/" element={<PageRenderer data={responsibleUsePolicyPage} />} />
+            {/* Sports / IPL Information */}
+            <Route path="/fairplay-sports/" element={<PageRenderer data={fairplaySportsPage} />} />
+            <Route path="/fairplay-ipl-2026/" element={<PageRenderer data={fairplayIPL2026Page} />} />
+            <Route path="/fairplay-ipl-guide/" element={<PageRenderer data={fairplayIPLGuidePage} />} />
+            <Route path="/fairplay-award-ipl-2026/" element={<PageRenderer data={fairplayAwardIPL2026Page} />} />
+            <Route path="/fairplay-sports-updates/" element={<PageRenderer data={fairplaySportsUpdatesPage} />} />
 
-          {/* 404 */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+            {/* Legal / Trust */}
+            <Route path="/privacy-policy/" element={<PageRenderer data={privacyPolicyPage} />} />
+            <Route path="/terms/" element={<PageRenderer data={termsPage} />} />
+            <Route path="/disclaimer/" element={<PageRenderer data={disclaimerPage} />} />
+            <Route path="/cookie-policy/" element={<PageRenderer data={cookiePolicyPage} />} />
+            <Route path="/security-policy/" element={<PageRenderer data={securityPolicyPage} />} />
+            <Route path="/responsible-use-policy/" element={<PageRenderer data={responsibleUsePolicyPage} />} />
+
+            {/* 404 */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+        <WhatsAppFloat />
+        <StickyBottomNav />
+        <AuthModal />
+      </div>
+    </AuthModalProvider>
   );
 }
 

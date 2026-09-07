@@ -1,0 +1,16 @@
+export const SITE_CONFIG = {
+  name: 'Fairplay',
+  tagline: 'Online Sports Betting & Cricket ID Provider in India',
+  siteUrl: 'https://www.fairplay1login.com',
+  whatsappUrl: 'https://wa.link/reddybookstore',
+  whatsappRegisterUrl: 'https://wa.link/reddybookstore',
+  whatsappLoginUrl: 'https://wa.link/reddybookstore',
+  whatsappDemoUrl: 'https://wa.link/reddybookstore',
+  whatsappBetUrl: 'https://wa.link/reddybookstore',
+  whatsappCasinoUrl: 'https://wa.link/reddybookstore',
+  whatsappSupportUrl: 'https://wa.link/reddybookstore',
+  supportAvailability: '24/7 / 365 Days Instant Service',
+  minDeposit: '₹100',
+  withdrawalTime: '2 Minutes Instant Payout',
+  bonusOffer: '300% First Deposit Bonus',
+};

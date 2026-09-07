@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import type { FC } from 'react';
 
 export interface SEOProps {
   title: string;
@@ -10,18 +9,19 @@ export interface SEOProps {
   structuredData?: object;
 }
 
-const SITE_URL = 'https://fairplay1login.com';
+const SITE_URL = 'https://www.fairplay1login.com';
 const SITE_NAME = 'Fairplay';
 
-const SEO: FC<SEOProps> = ({
+export default function SEO({
   title,
   description,
   canonical,
   keywords,
   ogType = 'website',
   structuredData,
-}) => {
-  const fullCanonical = `${SITE_URL}${canonical}`;
+}: SEOProps) {
+  const cleanCanonical = canonical.startsWith('/') ? canonical : `/${canonical}`;
+  const fullCanonical = `${SITE_URL}${cleanCanonical}`;
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 
   return (
@@ -35,11 +35,11 @@ const SEO: FC<SEOProps> = ({
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:image" content={`${SITE_URL}/og-default.png`} />
+      <meta property="og:image" content={`${SITE_URL}/images/logo.png`} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${SITE_URL}/og-default.png`} />
+      <meta name="twitter:image" content={`${SITE_URL}/images/logo.png`} />
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -47,7 +47,4 @@ const SEO: FC<SEOProps> = ({
       )}
     </Helmet>
   );
-};
-
-export default SEO;
-export { SITE_URL, SITE_NAME };
+}
