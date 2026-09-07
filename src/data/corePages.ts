@@ -494,6 +494,7 @@ export const helpCenterPage: PageData = {
     { text: 'Fairplay User Guide', url: '/fairplay-user-guide/' },
     { text: 'Contact Us', url: '/contact/' },
     { text: 'Fairplay Common Questions', url: '/fairplay-common-questions/' },
+    { text: 'Fairplay Help Guide', url: '/fairplay-help-guide/' },
   ],
 };
 

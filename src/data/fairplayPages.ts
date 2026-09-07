@@ -144,6 +144,8 @@ export const fairplayHubPage: PageData = {
     { text: 'Fairplay 2026', url: '/fairplay-2026/' },
     { text: 'Fairplay Beginner Guide', url: '/fairplay-beginner-guide/' },
     { text: 'Help Center', url: '/help/' },
+    { text: 'Fairplay Help Guide', url: '/fairplay-help-guide/' },
+    { text: 'Fairplay Global', url: '/fairplay-global/' },
     { text: 'FAQ', url: '/faq/' },
   ],
   structuredData: {
@@ -826,6 +828,7 @@ export const fairplayClubPage: PageData = {
     { text: 'Fairplay Sports', url: '/fairplay-sports/' },
     { text: 'Fairplay IPL 2026', url: '/fairplay-ipl-2026/' },
     { text: 'Fairplay Pro', url: '/fairplay-pro/' },
+    { text: 'Fairplay Global', url: '/fairplay-global/' },
     { text: 'Contact Us', url: '/contact/' },
   ],
 };
@@ -882,7 +885,7 @@ export const fairplayGlobalPage: PageData = {
     { text: 'Fairplay 24', url: '/fairplay-24/' },
     { text: 'Fairplay Online', url: '/fairplay-online/' },
     { text: 'Fairplay Latest Updates', url: '/fairplay-updates/' },
-    { text: 'Fairplay Global', url: '/fairplay-global/' },
+    { text: 'Fairplay Help Guide', url: '/fairplay-help-guide/' },
   ],
 };
 

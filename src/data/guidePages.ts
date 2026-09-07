@@ -740,6 +740,7 @@ export const fairplayTroubleshootingPage: PageData = {
     { text: 'Fairplay Password Help', url: '/fairplay-password-help/' },
     { text: 'Fairplay Account Security', url: '/fairplay-account-security/' },
     { text: 'Fairplay Common Questions', url: '/fairplay-common-questions/' },
+    { text: 'Fairplay Help Guide', url: '/fairplay-help-guide/' },
     { text: 'Contact Us', url: '/contact/' },
   ],
 };

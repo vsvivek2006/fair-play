@@ -71,6 +71,7 @@ export const fairplaySportsPage: PageData = {
     { text: 'Fairplay Hub', url: '/fairplay/' },
     { text: 'Fairplay Club', url: '/fairplay-club/' },
     { text: 'Fairplay 2026', url: '/fairplay-2026/' },
+    { text: 'Fairplay Global', url: '/fairplay-global/' },
     { text: 'Fairplay App', url: '/fairplay-app/' },
   ],
 };
