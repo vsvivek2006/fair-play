@@ -15,7 +15,7 @@ export const howFairplayWorksPage: PageData = {
     {
       heading: 'Content Organization',
       paragraphs: [
-        'Fairplay organizes content into a topical authority structure. The main hub page at /fairplay/ serves as the central navigation point, connecting to topic clusters that cover specific areas of the platform. Each cluster contains multiple pages with unique, in-depth content.',
+        'Fairplay provides complete, player-first betting coverage. From live cricket match odds and exchange rates to instant WhatsApp ID setup, secure UPI deposits, and fast cash withdrawals, everything is structured so you can find what you need in seconds.',
         'Content is organized by sport, event, and topic. When you visit a page, related content is linked contextually, helping you discover information that is relevant to what you are reading. This internal linking structure is designed to be natural and helpful, not forced.',
       ],
     },
@@ -172,15 +172,15 @@ export const fairplayUserGuidePage: PageData = {
     {
       heading: 'Platform Overview',
       paragraphs: [
-        'Fairplay is a digital sports platform that provides content, community features, and real-time updates across web and mobile interfaces. The platform is organized into topic clusters, with the main hub page serving as the central navigation point. For a high-level summary, see the Fairplay Overview page.',
-        'The platform covers multiple sports with a focus on cricket and the IPL. It offers personalization, community engagement, and a mobile app with offline capabilities. The Fairplay Features page provides a detailed breakdown of all features.',
+        'Fairplay gives you real-time sports betting access, instant account management, and 24/7 dedicated customer assistance across mobile and desktop. For a quick start, explore the Fairplay Overview page.',
+        'The platform covers multiple sports with a special focus on cricket and the IPL. It offers personalized betting history, high-odds exchanges, and a fast Android app. The Fairplay Features page provides a detailed breakdown of everything available.',
       ],
     },
     {
       heading: 'Navigation',
       paragraphs: [
-        'Fairplay is designed for intuitive navigation. The header bar provides quick access to main sections. Breadcrumbs at the top of each page show your location and provide links back to parent pages. The footer contains a comprehensive set of links organized by category.',
-        'The Sitemap page lists all public pages on the site, providing an alternative way to find content. Internal links within articles connect related pages, helping you discover relevant information naturally.',
+        'Fairplay is designed for fast, seamless navigation. The top header provides one-click access to Live Matches, App Download, Login Help, and WhatsApp Support. On mobile phones, tap the menu button to jump straight to any section.',
+        'Helpful links within every guide connect related matches and tutorials, allowing you to find odds rules, deposit guides, and bonus information effortlessly.',
       ],
     },
     {
@@ -362,44 +362,40 @@ export const fairplayWebsiteGuidePage: PageData = {
     'This guide helps you navigate and use the Fairplay website effectively. It covers site structure, navigation tools, content organization, and web-specific features to help you find what you are looking for quickly and efficiently.',
   sections: [
     {
-      heading: 'Site Structure',
+      heading: 'Website Features & Betting Areas',
       paragraphs: [
-        'The Fairplay website is organized into six main clusters: Core Pages, Fairplay Main Topic, App and Download, Login and Account, Guides and Tutorials, and Sports and IPL. The main hub page at /fairplay/ connects all clusters and serves as the central navigation point.',
-        'Each cluster contains multiple pages with unique content. Pages within a cluster link to each other, and related pages across clusters are also linked. This structure creates a natural, intuitive navigation experience. The Sitemap page lists all public pages for easy reference.',
+        'The Fairplay website gives you access to complete betting entertainment: Live Sports, Cricket Exchange, Android APK Download, Instant WhatsApp ID Setup, and 24/7 Customer Support.',
+        'Every section is optimized for speed and clarity, making it simple to check live ball-by-ball odds, place bets, and manage your wallet balance in real time.',
       ],
     },
     {
       heading: 'Navigation Tools',
       paragraphs: [
-        'The Fairplay website provides several navigation tools:',
-        'Header Navigation: Quick links to main sections (Home, About, Fairplay, App, Login, Guides, Sports, Help, Contact).',
-        'Breadcrumbs: Show your current location and provide links to parent pages.',
-        'Footer Links: Comprehensive links organized by category.',
-        'Internal Links: Contextual links within content that connect related pages.',
-        'Sitemap: A complete directory of all public pages.',
-        'Use these tools in combination to find what you need efficiently.',
+        'The Fairplay website provides multiple quick-access tools:',
+        'Top Header Bar: Instant access to Live Matches, Download App, Login Help, and 2-Minute WhatsApp ID.',
+        'Live Odds Slips: View active match events and exchange rates without reloading the page.',
+        'Footer Links: Explore all betting guides, safety policies, and payment instructions.',
+        'Direct WhatsApp Chat: Connect instantly with our official customer service for deposit or withdrawal support.',
       ],
     },
     {
-      heading: 'Finding Content',
+      heading: 'Finding What You Need',
       paragraphs: [
-        'To find specific content on the Fairplay website:',
-        'Use the header navigation to go to the relevant section.',
-        'Browse the section pages for links to specific topics.',
-        'Use the breadcrumbs to navigate back to parent pages.',
-        'Check the Sitemap page for a complete list of all pages.',
-        'Follow internal links from related pages to discover new content.',
-        'If you cannot find what you are looking for, the Help Center and FAQ pages may point you in the right direction.',
+        'To find matches, guides, or account help quickly:',
+        'Tap the top menu or quick links to jump directly to your preferred sport.',
+        'Check the Live Matches section on the homepage for today’s active cricket games and odds.',
+        'Visit the Help Center and FAQ pages for immediate answers on UPI deposits, withdrawals, and login questions.',
+        'Message our official 24/7 WhatsApp support anytime for hands-on assistance.',
       ],
     },
     {
       heading: 'Web-Specific Features',
       paragraphs: [
         'The Fairplay website offers several features specific to the web platform:',
-        'Full-screen layout with side-by-side content and navigation.',
-        'Multi-tab browsing for comparing content across pages.',
-        'Comprehensive footer with all site links.',
-        'Desktop-optimized layout for larger screens.',
+        'Full-screen layout with side-by-side match tracking and odds slips.',
+        'Multi-tab browsing for comparing odds and match events simultaneously.',
+        'Desktop and mobile responsive layout that adapts to any screen.',
+        'Instant cashier access for quick deposits and cash withdrawals.',
         'The Fairplay Online page provides additional information about the web experience.',
       ],
     },
@@ -426,7 +422,7 @@ export const fairplayWebsiteGuidePage: PageData = {
     { text: 'Fairplay Website', url: '/fairplay-website/' },
     { text: 'Fairplay Online', url: '/fairplay-online/' },
     { text: 'Fairplay Hub', url: '/fairplay/' },
-    { text: 'Sitemap', url: '/sitemap/' },
+    { text: 'Live Sports Betting', url: '/fairplay-sports/' },
     { text: 'Fairplay Guide', url: '/fairplay-guide/' },
     { text: 'Fairplay User Guide', url: '/fairplay-user-guide/' },
     { text: 'Fairplay Troubleshooting', url: '/fairplay-troubleshooting/' },

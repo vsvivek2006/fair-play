@@ -25,10 +25,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Core Guides */}
+          {/* Column 2: Helpful Guides */}
           <div>
             <h4 className="text-white font-serif font-bold text-sm sm:text-base tracking-wide mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-7 after:h-0.5 after:bg-[#d4af37]">
-              Core Guides
+              Helpful Guides
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
@@ -48,17 +48,17 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/fairplay-features/" className="hover:text-[#d4af37] transition-colors">
-                  Platform Features
+                  Top Features &amp; Bonuses
                 </Link>
               </li>
               <li>
                 <Link to="/fairplay-updates/" className="hover:text-[#d4af37] transition-colors">
-                  Platform Updates 2026
+                  What's New in 2026
                 </Link>
               </li>
               <li>
                 <Link to="/about/" className="hover:text-[#d4af37] transition-colors">
-                  About Our Platform
+                  About Fairplay
                 </Link>
               </li>
             </ul>
@@ -67,7 +67,7 @@ export default function Footer() {
           {/* Column 3: Account & App */}
           <div>
             <h4 className="text-white font-serif font-bold text-sm sm:text-base tracking-wide mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-7 after:h-0.5 after:bg-[#d4af37]">
-              Account &amp; Mobile
+              Account &amp; Mobile App
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
@@ -87,17 +87,17 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/fairplay-apk/" className="hover:text-[#d4af37] transition-colors">
-                  Android APK Installation
+                  Android APK Download
                 </Link>
               </li>
               <li>
                 <Link to="/fairplay-account-security/" className="hover:text-[#d4af37] transition-colors">
-                  Account Security
+                  Safe &amp; Secure Gaming
                 </Link>
               </li>
               <li>
                 <Link to="/fairplay-troubleshooting/" className="hover:text-[#d4af37] transition-colors">
-                  Troubleshooting
+                  Login &amp; Account Help
                 </Link>
               </li>
             </ul>
@@ -111,12 +111,12 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
                 <Link to="/fairplay-ipl-2026/" className="hover:text-[#d4af37] transition-colors">
-                  IPL 2026 Match Schedule
+                  IPL 2026 Matches &amp; Odds
                 </Link>
               </li>
               <li>
                 <Link to="/fairplay-sports/" className="hover:text-[#d4af37] transition-colors">
-                  Sports Markets &amp; Odds
+                  Live Cricket &amp; Sports Odds
                 </Link>
               </li>
               <li>
@@ -176,9 +176,6 @@ export default function Footer() {
             </Link>
             <Link to="/responsible-use-policy/" className="hover:text-[#d4af37] transition-colors">
               Responsible Gaming
-            </Link>
-            <Link to="/sitemap/" className="hover:text-[#d4af37] transition-colors">
-              Sitemap
             </Link>
           </div>
         </div>

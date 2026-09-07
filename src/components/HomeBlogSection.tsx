@@ -26,28 +26,28 @@ const articles = [
 
 const guideHubs = [
   {
-    title: 'Beginner Setup Guide',
+    title: 'Beginner ID Guide',
     icon: 'fa-user-gear',
     link: '/fairplay-beginner-guide/',
-    desc: 'Learn how to generate your account, deposit funds, and place your first wager.',
+    desc: 'Get your verified ID in 2 minutes, deposit with UPI, and start placing winning bets.',
   },
   {
-    title: 'Account Security & Safety',
+    title: 'Safe & Secure Gaming',
     icon: 'fa-shield-halved',
     link: '/fairplay-account-security/',
-    desc: 'Tips on safeguarding your login credentials and two-factor verification.',
+    desc: 'Protect your account, verify your phone, and keep your winning balance safe.',
   },
   {
-    title: 'Password Help & Recovery',
+    title: 'Instant Password Help',
     icon: 'fa-key',
     link: '/fairplay-password-help/',
-    desc: 'Instant recovery steps if you lose access to your Fairplay password or username.',
+    desc: 'Quickly recover your login credentials or reset your password on WhatsApp.',
   },
   {
-    title: 'Full Platform Walkthrough',
-    icon: 'fa-compass',
+    title: 'How to Play & Win',
+    icon: 'fa-trophy',
     link: '/fairplay-guide/',
-    desc: 'Comprehensive overview of all markets, live streams, and cashout features.',
+    desc: 'Master live cricket exchange betting, casino games, and quick cashout tricks.',
   },
 ];
 
@@ -57,9 +57,9 @@ export default function HomeBlogSection() {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <div className="title-wrapper">
-          <h2 className="section-title">Guides &amp; Latest Updates</h2>
+          <h2 className="section-title">Betting Tips &amp; Player Guides</h2>
           <p className="section-subtitle">
-            Stay informed with expert betting tips, account guides, and IPL 2026 match analyses.
+            Easy step-by-step guides to help you get your ID, place live bets, and cash out your winnings in minutes.
           </p>
         </div>
 

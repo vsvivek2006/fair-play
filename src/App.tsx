@@ -15,7 +15,6 @@ import {
   contactPage,
   faqPage,
   helpCenterPage,
-  sitemapPage,
   editorialPolicyPage,
   accessibilityPage,
 } from '@/data/corePages';
@@ -100,7 +99,7 @@ function NotFound() {
     <>
       <SEO
         title="Page Not Found | Fairplay"
-        description="The page you are looking for does not exist. Browse our sitemap or return to homepage."
+        description="The page you are looking for does not exist. Explore our betting guides or return to homepage."
         canonical="/404/"
       />
       <div className="max-w-2xl mx-auto px-4 py-32 text-center">
@@ -139,7 +138,6 @@ function App() {
             <Route path="/contact/" element={<PageRenderer data={contactPage} />} />
             <Route path="/faq/" element={<PageRenderer data={faqPage} />} />
             <Route path="/help/" element={<PageRenderer data={helpCenterPage} />} />
-            <Route path="/sitemap/" element={<PageRenderer data={sitemapPage} />} />
             <Route path="/editorial-policy/" element={<PageRenderer data={editorialPolicyPage} />} />
             <Route path="/accessibility/" element={<PageRenderer data={accessibilityPage} />} />
 

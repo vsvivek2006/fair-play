@@ -99,7 +99,7 @@ export default function LiveMatches() {
         <div className="title-wrapper">
           <h2 className="section-title">Live Games &amp; Match Odds</h2>
           <p className="section-subtitle">
-            Real-time match events with live betting exchange odds, instant settlements, and 100% verified ID access.
+            Bet live on today's cricket matches with the best market odds, instant cash payouts, and 2-minute verified ID activation.
           </p>
         </div>
 
@@ -306,7 +306,7 @@ export default function LiveMatches() {
               to="/fairplay-sports/"
               className="text-[#d4af37] hover:text-[#f3e5ab] font-bold flex items-center gap-1.5 transition-colors"
             >
-              <span>View Full 2026 Sports Schedule</span>
+              <span>View Today's Sports &amp; Match Odds</span>
               <i className="fa-solid fa-arrow-right"></i>
             </Link>
           </div>

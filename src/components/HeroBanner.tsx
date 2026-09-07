@@ -46,7 +46,7 @@ const slides: Slide[] = [
     subtitle: '24/7 Dedicated Support',
     titlePrefix: 'Win Big With',
     titleHighlight: 'Fairplay',
-    desc: "Join India's largest gaming network. Superior platform tech with guaranteed privacy and round-the-clock service.",
+    desc: "Join India's largest sports betting family. Enjoy 100% safe gaming, fast payouts, and round-the-clock VIP support.",
     primaryCta: 'Register Today',
     primaryIcon: 'fa-trophy',
   },

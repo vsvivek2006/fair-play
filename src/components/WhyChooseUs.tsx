@@ -4,22 +4,22 @@ const featureCards = [
   {
     title: 'Live & Pre-Match Betting',
     image: '/images/live-&-pre-match-betting.jpg',
-    desc: 'Indulge in the excitement of betting in real-time as the match unfolds with high-speed in-play exchange odds, plus pre-match strategic position planning.',
+    desc: 'Feel the rush of betting ball-by-ball with the highest live exchange odds, zero delay, and instant cashout whenever you want.',
   },
   {
-    title: 'Secure Transactions & Fast Payouts',
+    title: 'Instant 2-Minute Withdrawals',
     image: '/images/secure-transactions.jpg',
-    desc: 'Deposit and withdraw funds with total peace of mind. Instant 2-minute UPI/IMPS withdrawals with zero hidden fees and bank-grade data security.',
+    desc: 'Deposit with GPay, PhonePe, or UPI and get your winning cash in your bank account in 2 to 5 minutes guaranteed.',
   },
   {
-    title: 'Competitive Match Odds',
+    title: 'Best Odds & Lowest Margin',
     image: '/images/competitive-odds.jpg',
-    desc: 'From exciting IPL 2026 cricket matches to premier football leagues and tennis tournaments, enjoy industry-leading odds with lowest commission rates.',
+    desc: 'Get more value on every bet across IPL 2026, international cricket, football, and tennis with India’s lowest commission rates.',
   },
   {
-    title: '24/7 Dedicated Support',
+    title: '24/7 Live WhatsApp Care',
     image: '/images/24-7-live-coverage.jpg',
-    desc: 'Round-the-clock personalized assistance via official WhatsApp lines. Fast account creation, balance replenishment, and prompt customer resolution.',
+    desc: 'Need help or want a new ID? Our dedicated team is available 24 hours a day on WhatsApp for instant assistance.',
   },
 ];
 

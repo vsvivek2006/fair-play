@@ -41,10 +41,10 @@ export const homePage: PageData = {
       ],
     },
     {
-      heading: 'Explore the Fairplay Ecosystem',
+      heading: 'Explore Fairplay Betting & Features',
       paragraphs: [
-        'Fairplay is more than a single product — it is an ecosystem of tools, guides, and resources designed to help you get the most out of the platform. From the main Fairplay hub to specialized guides on app installation, account management, and sports coverage, every part of the ecosystem is interconnected through a natural internal linking structure that helps you find exactly what you need.',
-        'The Fairplay hub page serves as the central point of navigation, connecting you to topic clusters covering the app, login and account management, guides and tutorials, sports information, and legal resources. Each cluster contains multiple pages with in-depth, unique content tailored to specific user needs.',
+        'Fairplay provides an all-in-one sports betting and casino gaming platform built for Indian players. From live cricket betting and tennis odds to rapid WhatsApp account setup and instant cashouts, everything is designed to give you a smooth, rewarding betting journey.',
+        'Our easy-to-follow betting guides, step-by-step app download tutorials, deposit and withdrawal walk-throughs, and 24/7 dedicated customer assistance ensure you always have what you need to play safely and win big.',
       ],
     },
     {
@@ -96,7 +96,7 @@ export const homePage: PageData = {
     description: 'Your complete guide to the Fairplay digital sports platform.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://fairplay1login.com/sitemap/',
+      target: 'https://fairplay1login.com/?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   },
@@ -161,17 +161,17 @@ export const aboutPage: PageData = {
       ],
     },
     {
-      heading: 'Our Approach to Content',
+      heading: 'Our Commitment to Players',
       paragraphs: [
-        'Content quality is a top priority at Fairplay. We follow a clear editorial policy that governs how content is created, reviewed, and maintained. Every page on the site is written with a specific search intent in mind, ensuring that users find exactly what they are looking for. We avoid keyword stuffing, duplicate content, and thin pages, focusing instead on comprehensive, genuinely useful information.',
-        'Our content is organized into topical clusters, with the Fairplay hub page serving as the central navigation point. This structure helps users discover related content naturally and ensures that every page is connected to the broader ecosystem through relevant internal links.',
+        'Player trust and transparent gaming are the top priorities at Fairplay. Every guide, match preview, and tutorial is designed to give you honest odds explanations, verified banking steps, and practical strategies to elevate your sports betting experience.',
+        'Whether you are placing your very first cricket bet or managing high-stakes exchange positions, our comprehensive guides help you understand market rules, maximize deposit bonuses, and withdraw your winnings safely.',
       ],
     },
     {
-      heading: 'Editorial Standards',
+      heading: 'Honest & Verified Betting Information',
       paragraphs: [
-        'All content on Fairplay is created to meet consistent editorial standards. We ensure that every page has a unique title, meta description, and H1. Content is structured with proper heading hierarchy, descriptive image alt text, and relevant internal links. We do not publish fake reviews, fake statistics, guaranteed-win claims, or misleading information.',
-        'Our editorial policy page provides more detail about how content is managed on the platform. We encourage users to review it to understand our approach to accuracy, updates, and content governance.',
+        'All betting advice, platform tutorials, and match statistics published on Fairplay are thoroughly verified. We never make unrealistic guaranteed-win claims, share fake reviews, or promote misleading offers. Our focus is 100% on fair gaming, responsible play, and instant payouts.',
+        'If you ever have any questions or need direct assistance, our dedicated customer support team is on standby 24/7 on WhatsApp to assist you in real time.',
       ],
     },
     {
@@ -497,185 +497,6 @@ export const helpCenterPage: PageData = {
   ],
 };
 
-export const sitemapPage: PageData = {
-  slug: '/sitemap/',
-  title: 'Fairplay Sitemap — Complete Page Directory',
-  metaDescription: 'Browse the complete Fairplay sitemap with links to all pages including guides, app resources, account help, sports coverage, and legal information.',
-  h1: 'Fairplay Sitemap',
-  keywords: 'fairplay sitemap, fairplay directory, fairplay pages, fairplay links',
-  ogType: 'website',
-  category: 'Sitemap',
-  breadcrumb: [{ name: 'Home', url: '/' }, { name: 'Sitemap', url: '/sitemap/' }],
-  intro:
-    'This page provides a complete directory of all public pages on the Fairplay website. Use it to quickly find the content you are looking for, or to discover new pages you may not have explored yet. Every link below leads to a unique, content-rich page.',
-  sections: [
-    {
-      heading: 'Core Pages',
-      paragraphs: [
-        'These are the foundational pages of the Fairplay website, covering general information, support, and navigation.',
-      ],
-      subsections: [
-        {
-          heading: 'Links',
-          paragraphs: [
-            'Home — The main landing page for Fairplay.',
-            'About — Information about the Fairplay platform and mission.',
-            'Contact — How to reach Fairplay support.',
-            'FAQ — Frequently asked questions and answers.',
-            'Help Center — Central support resources and guides.',
-            'Sitemap — This page, listing all content.',
-            'Editorial Policy — How content is created and managed.',
-            'Accessibility — Our commitment to accessible design.',
-          ],
-        },
-      ],
-    },
-    {
-      heading: 'Fairplay Main Topic',
-      paragraphs: [
-        'These pages cover the core Fairplay platform, its features, and its evolution.',
-      ],
-      subsections: [
-        {
-          heading: 'Links',
-          paragraphs: [
-            'Fairplay — The main hub page for the Fairplay platform.',
-            'Fairplay Guide — A comprehensive guide to using Fairplay.',
-            'Fairplay Features — Detailed breakdown of platform features.',
-            'Fairplay Overview — A high-level summary of Fairplay.',
-            'Fairplay 2026 — The platform roadmap and future plans.',
-            'Fairplay Online — Using Fairplay on the web.',
-            'My Fairplay — Personalizing your Fairplay experience.',
-            'Fairplay Pro — Advanced features and capabilities.',
-            'Fairplay 24 — Round-the-clock access and support.',
-            'Fairplay Club — Community features and engagement.',
-            'Fairplay Global — Fairplay international presence.',
-            'Fairplay Website — About the Fairplay website itself.',
-            'Fairplay Mobile — Mobile experience overview.',
-            'Fairplay Latest Updates — Recent changes and additions.',
-          ],
-        },
-      ],
-    },
-    {
-      heading: 'App and Download Cluster',
-      paragraphs: [
-        'Everything related to the Fairplay mobile app, including download, installation, and updates.',
-      ],
-      subsections: [
-        {
-          heading: 'Links',
-          paragraphs: [
-            'Fairplay App — Main app page.',
-            'Fairplay App Guide — How to use the app.',
-            'Fairplay Download — How to download the app.',
-            'Fairplay Download Guide — Detailed download instructions.',
-            'Fairplay APK — About the APK file.',
-            'Fairplay APK Guide — How to use the APK.',
-            'Fairplay APK Installation Guide — Step-by-step APK installation.',
-            'Fairplay App Installation Guide — General app installation.',
-            'Fairplay Latest Version — Current app version information.',
-            'Fairplay App Updates — How to update the app.',
-            'Fairplay Mobile App Guide — Mobile app usage guide.',
-            'Fairplay App Features — Features available in the app.',
-          ],
-        },
-      ],
-    },
-    {
-      heading: 'Login and Account Cluster',
-      paragraphs: [
-        'Resources for account creation, login, security, and troubleshooting.',
-      ],
-      subsections: [
-        {
-          heading: 'Links',
-          paragraphs: [
-            'Fairplay Login — Main login page.',
-            'Fairplay Login Guide — How to log in step by step.',
-            'Fairplay Register — How to create an account.',
-            'Fairplay Registration Guide — Detailed registration instructions.',
-            'Fairplay Account Guide — Managing your account.',
-            'Fairplay Password Help — Password recovery and reset.',
-            'Fairplay Login Troubleshooting — Fixing login issues.',
-            'Fairplay Registration Help — Help with registration problems.',
-            'Fairplay Account Security — Keeping your account secure.',
-          ],
-        },
-      ],
-    },
-    {
-      heading: 'Guides and Information',
-      paragraphs: [
-        'In-depth guides covering various aspects of the Fairplay platform.',
-      ],
-      subsections: [
-        {
-          heading: 'Links',
-          paragraphs: [
-            'How Fairplay Works — Platform mechanics explained.',
-            'Fairplay Beginner Guide — For new users.',
-            'Fairplay User Guide — Comprehensive user manual.',
-            'Fairplay Mobile Guide — Mobile experience guide.',
-            'Fairplay Website Guide — Using the Fairplay website.',
-            'Fairplay Features Guide — Guide to platform features.',
-            'Fairplay Help Guide — Finding help on Fairplay.',
-            'Fairplay Troubleshooting — General troubleshooting.',
-            'Fairplay Common Questions — Common Q and A.',
-            'Fairplay Safety Guide — Staying safe on Fairplay.',
-            'Fairplay Responsible Use Guide — Using Fairplay responsibly.',
-          ],
-        },
-      ],
-    },
-    {
-      heading: 'Sports and IPL Information',
-      paragraphs: [
-        'Sports coverage, IPL information, and related content.',
-      ],
-      subsections: [
-        {
-          heading: 'Links',
-          paragraphs: [
-            'Fairplay Sports — Main sports page.',
-            'Fairplay IPL 2026 — IPL 2026 coverage.',
-            'Fairplay IPL Guide — Guide to IPL on Fairplay.',
-            'Fairplay Award IPL 2026 — IPL awards information.',
-            'Fairplay Sports Updates — Latest sports updates.',
-          ],
-        },
-      ],
-    },
-    {
-      heading: 'Legal and Trust',
-      paragraphs: [
-        'Legal information pages governing the use of the Fairplay platform.',
-      ],
-      subsections: [
-        {
-          heading: 'Links',
-          paragraphs: [
-            'Privacy Policy — How user data is handled.',
-            'Terms and Conditions — Terms of use.',
-            'Disclaimer — Legal disclaimer.',
-            'Cookie Policy — How cookies are used.',
-            'Security Policy — Platform security information.',
-            'Responsible Use Policy — Responsible use guidelines.',
-          ],
-        },
-      ],
-    },
-  ],
-  relatedLinks: [
-    { text: 'Home', url: '/' },
-    { text: 'Fairplay Hub', url: '/fairplay/' },
-    { text: 'Help Center', url: '/help/' },
-    { text: 'FAQ', url: '/faq/' },
-    { text: 'Contact Us', url: '/contact/' },
-    { text: 'About', url: '/about/' },
-  ],
-};
-
 export const editorialPolicyPage: PageData = {
   slug: '/editorial-policy/',
   title: 'Fairplay Editorial Policy — Content Standards and Practices',
@@ -689,43 +510,43 @@ export const editorialPolicyPage: PageData = {
     'The Fairplay Editorial Policy outlines the standards and practices that govern all content published on this website. It defines how content is created, reviewed, maintained, and updated to ensure that every page meets our quality benchmarks and serves the needs of our users.',
   sections: [
     {
-      heading: 'Content Creation Principles',
+      heading: 'Player-First Guidance',
       paragraphs: [
-        'All content on Fairplay is created with the user in mind. Every page is designed to address a specific search intent, provide genuinely useful information, and offer a unique perspective that distinguishes it from other pages on the site. We do not create doorway pages, duplicate keyword pages, or thin content pages designed solely to attract search traffic.',
-        'Our content is written by knowledgeable authors who understand the Fairplay platform and the needs of our users. We prioritize clarity, accuracy, and completeness, ensuring that every article provides real value to the reader.',
+        'All content on Fairplay is created with our players in mind. Every article and guide is designed to provide genuinely useful betting tips, accurate odds calculations, and seamless account instructions. We never publish clickbait or misleading pages designed to confuse visitors.',
+        'Our content is written by experienced sports analysts and gaming specialists who understand the Fairplay platform and the exact needs of Indian players. We prioritize clarity, accuracy, and quick answers.',
       ],
     },
     {
-      heading: 'Accuracy and Fact-Checking',
+      heading: 'Accuracy & Real Match Odds',
       paragraphs: [
-        'Accuracy is a fundamental requirement for all Fairplay content. We verify information before publishing and review content periodically to ensure it remains current. When platform features change, we update affected pages to reflect the latest information.',
-        'We do not publish fake reviews, fake statistics, guaranteed-win claims, or misleading information. All claims made in our content are based on verifiable facts or clearly labeled as opinions where appropriate.',
+        'Accuracy is a fundamental requirement for all Fairplay guides. We verify odds explanations and game rules before publishing, keeping all tournament information current.',
+        'We strictly do not publish fake reviews, fabricated win rates, or misleading bonuses. All information provided across our platform is genuine, transparent, and focused on helping you bet responsibly.',
       ],
     },
     {
-      heading: 'Content Structure and SEO',
+      heading: 'Clear & Simple Platform Information',
       paragraphs: [
-        'Every page on Fairplay follows a consistent content structure designed for both readability and search engine optimization. Each page has a unique title, meta description, and H1 tag. Content is organized with proper H2 and H3 heading hierarchy, and internal links are placed contextually where they add value to the reader.',
-        'We use structured data (schema markup) only when appropriate and accurate. This includes WebSite, Organization, BreadcrumbList, Article, and FAQPage schemas. We do not create misleading structured data or mark up content in ways that do not accurately represent the page.',
+        'Every guide on Fairplay is structured for quick reading and practical use. Whether you need help understanding cricket session markets or setting up your Android APK, our step-by-step instructions get you to the answer in seconds.',
+        'We believe in full transparency: all platform rules, payout timelines, deposit options, and account terms are stated clearly without confusing technical jargon.',
       ],
     },
     {
-      heading: 'Update and Maintenance',
+      heading: 'Continuous Platform Updates',
       paragraphs: [
-        'Content maintenance is an ongoing process at Fairplay. We regularly review pages to ensure information is current, links are working, and content remains accurate. Pages that become outdated are updated promptly, and pages that are no longer relevant are removed or redirected.',
-        'Users can help us maintain content quality by reporting errors, broken links, or outdated information through our Contact page. We appreciate user feedback and use it to improve the platform.',
+        'Sports betting moves fast, and so do we. We continually update our cricket match schedules, tournament rules, APK download files, and bonus terms to keep every piece of information fresh and accurate.',
+        'Players can reach our support team anytime via WhatsApp or our Contact page if they spot any outdated detail or have a question about recent platform updates.',
       ],
     },
     {
-      heading: 'Internal Linking Policy',
+      heading: 'Direct Help & Quick Navigation',
       paragraphs: [
-        'Internal links on Fairplay are placed where they are contextually relevant and add value to the reader. We do not force links where they are not appropriate, and we use varied, natural anchor text rather than repeating the same anchor on every page. Every major page links to 5 to 10 genuinely related pages, and every supporting article links back to its relevant cluster hub.',
+        'We connect related guides directly so that whenever you are reading about an IPL match, you can easily jump to relevant odds guides, live score updates, or deposit assistance with a single tap.',
       ],
     },
     {
-      heading: 'Transparency',
+      heading: 'Fair Play & Player Trust',
       paragraphs: [
-        'We believe in transparency about how our content is created and managed. This editorial policy is publicly accessible, as are our privacy policy, terms, and disclaimer. If you have questions about our editorial practices, we welcome your feedback through the Contact page.',
+        'We believe in absolute transparency about our operations and policies. This policy is publicly accessible, alongside our Privacy Policy, Terms and Conditions, and Responsible Gaming guidelines. Our 24/7 WhatsApp VIP support is always ready to assist you.',
       ],
     },
   ],
@@ -794,7 +615,6 @@ export const accessibilityPage: PageData = {
     { text: 'Editorial Policy', url: '/editorial-policy/' },
     { text: 'Contact Us', url: '/contact/' },
     { text: 'Help Center', url: '/help/' },
-    { text: 'FAQ', url: '/faq/' },
-    { text: 'Sitemap', url: '/sitemap/' },
+    { text: 'Live Cricket Odds', url: '/fairplay-sports/' },
   ],
 };

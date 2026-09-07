@@ -5,7 +5,6 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedLinks from '@/components/RelatedLinks';
 import { SITE_CONFIG } from '@/config/site';
 import { Link } from 'react-router-dom';
-import { masterSitemapClusters } from '@/data/sitemapDirectory';
 
 function breadcrumbStructuredData(items: { name: string; url: string }[]) {
   return {
@@ -191,15 +190,15 @@ export default function PageRenderer({ data }: PageRendererProps) {
               <div className="flex flex-wrap items-center gap-3 sm:gap-5 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-white/10 text-[11px] sm:text-xs text-slate-400">
                 <div className="flex items-center gap-2">
                   <i className="fa-solid fa-shield-halved text-[#d4af37]"></i>
-                  <span>Verified Fairplay Guide</span>
+                  <span>Official Fairplay ID Guide</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <i className="fa-solid fa-circle-check text-[#25d366]"></i>
-                  <span>Updated for IPL 2026</span>
+                  <span>IPL 2026 Special Bonus</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <i className="fa-solid fa-headset text-[#00f2fe]"></i>
-                  <span>24/7 WhatsApp Assistance</span>
+                  <span>24/7 WhatsApp Support</span>
                 </div>
               </div>
             </div>
@@ -209,12 +208,12 @@ export default function PageRenderer({ data }: PageRendererProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Main Content (Left ~70%) */}
             <article className="lg:col-span-8 min-w-0">
-              {/* Dynamic Scrollspy Table of Contents (TOC) */}
+              {/* Dynamic Scrollspy Quick Guide Navigation */}
               {data.sections && data.sections.length > 1 && (
                 <div className="mb-8 sm:mb-10 p-4 sm:p-6 rounded-xl bg-[#121826]/90 border border-[#d4af37]/30 shadow-md">
                   <div className="flex items-center gap-2.5 text-[#d4af37] font-bold text-sm mb-3">
-                    <i className="fa-solid fa-list-ul"></i>
-                    <span className="font-serif tracking-wide uppercase">Table of Contents</span>
+                    <i className="fa-solid fa-compass text-sm"></i>
+                    <span className="font-serif tracking-wide uppercase">Quick Guide Navigation</span>
                   </div>
                   <ul className="space-y-2 text-xs sm:text-sm">
                     {data.sections.map((section, sIdx) => {
@@ -240,66 +239,6 @@ export default function PageRenderer({ data }: PageRendererProps) {
                       );
                     })}
                   </ul>
-                </div>
-              )}
-
-              {/* 65-Page Master Interactive Directory (Rendered on /sitemap/) */}
-              {data.slug === '/sitemap/' && (
-                <div className="mb-14 space-y-8">
-                  <div className="p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-[#1e293b] to-[#0f172a] border border-[#d4af37]/40 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
-                    <div>
-                      <h2 className="text-lg sm:text-2xl font-bold font-serif text-white flex items-center gap-2">
-                        <i className="fa-solid fa-sitemap text-[#d4af37]"></i>
-                        <span>Master Index: All 65 Pages</span>
-                      </h2>
-                      <p className="text-xs sm:text-sm text-slate-300 mt-1">
-                        Hierarchical, crawlable directory covering all 7 topic clusters.
-                      </p>
-                    </div>
-                    <div className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#f3e5ab] text-xs font-bold shrink-0 self-start sm:self-auto">
-                      65 Verified Pages
-                    </div>
-                  </div>
-
-                  <div className="space-y-6 sm:space-y-8">
-                    {masterSitemapClusters.map((cluster, cIdx) => (
-                      <div
-                        key={cIdx}
-                        className="p-4 sm:p-6 rounded-2xl bg-[#0f1422]/90 border border-white/10 shadow-lg"
-                      >
-                        <div className="flex items-center justify-between pb-3.5 mb-3.5 sm:pb-4 sm:mb-4 border-b border-white/10">
-                          <h3 className="text-sm sm:text-lg font-bold font-serif text-[#f3e5ab] flex items-center gap-2.5">
-                            <i className={`fa-solid ${cluster.icon} text-[#d4af37]`}></i>
-                            <span>{cluster.name}</span>
-                          </h3>
-                          <span className="text-[11px] sm:text-xs text-slate-400 bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
-                            {cluster.count} Pages
-                          </span>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          {cluster.pages.map((p, pIdx) => (
-                            <Link
-                              key={pIdx}
-                              to={p.path}
-                              className="p-3 sm:p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[#d4af37]/40 hover:bg-white/[0.05] transition-all group block min-w-0"
-                            >
-                              <div className="flex items-center justify-between text-xs sm:text-sm font-bold text-white group-hover:text-[#d4af37] transition-colors mb-1 gap-2">
-                                <span className="truncate">{p.title}</span>
-                                <i className="fa-solid fa-arrow-right text-[10px] text-slate-500 group-hover:text-[#d4af37] group-hover:translate-x-1 transition-all shrink-0"></i>
-                              </div>
-                              <p className="text-[11px] text-slate-400 leading-snug line-clamp-1">
-                                {p.desc}
-                              </p>
-                              <span className="text-[10px] text-slate-500 font-mono mt-1 block truncate">
-                                {p.path}
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               )}
 
@@ -452,7 +391,7 @@ export default function PageRenderer({ data }: PageRendererProps) {
               <div className="glass-card p-5 border border-white/10 space-y-3">
                 <h4 className="text-sm font-bold font-serif text-white flex items-center gap-2">
                   <i className="fa-solid fa-magnifying-glass text-[#d4af37]"></i>
-                  <span>Search Knowledge Base</span>
+                  <span>Search Betting Guides</span>
                 </h4>
                 <div className="relative">
                   <input
@@ -462,14 +401,6 @@ export default function PageRenderer({ data }: PageRendererProps) {
                     placeholder="Search guides, APK, login..."
                     className="w-full bg-[#0a0d14] border border-white/10 rounded-xl py-2 px-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#d4af37]"
                   />
-                  {searchTerm && (
-                    <Link
-                      to={`/sitemap/`}
-                      className="mt-2 block text-center text-[11px] text-[#d4af37] font-semibold hover:underline"
-                    >
-                      Browse full directory &rarr;
-                    </Link>
-                  )}
                 </div>
               </div>
 
@@ -477,7 +408,7 @@ export default function PageRenderer({ data }: PageRendererProps) {
               <div className="glass-card p-5 border border-white/10 space-y-3">
                 <h4 className="text-sm font-bold font-serif text-white flex items-center gap-2">
                   <i className="fa-solid fa-layer-group text-[#d4af37]"></i>
-                  <span>Fairplay Topic Hubs</span>
+                  <span>Popular Betting Guides</span>
                 </h4>
                 <ul className="space-y-2 text-xs">
                   <li>

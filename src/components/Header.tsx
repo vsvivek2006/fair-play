@@ -254,7 +254,7 @@ export default function Header() {
                 <span className="w-2 h-2 rounded-full bg-[#25d366] animate-ping" />
                 <span className="font-bold text-[#f3e5ab] text-[11px] tracking-wide">FAIRPLAY 24/7 LIVE</span>
               </div>
-              <span className="text-[10px] text-slate-400 font-medium">Instant ID Setup</span>
+              <span className="text-[10px] text-slate-400 font-medium">Get ID in 2 Mins</span>
             </div>
 
             {/* Quick Login & Register Buttons */}
@@ -284,7 +284,7 @@ export default function Header() {
             {/* Useful Navigation Section */}
             <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 px-1 flex items-center gap-1.5">
               <i className="fa-solid fa-compass text-[#d4af37] text-xs"></i>
-              <span>Quick Navigation</span>
+              <span>Quick Menu</span>
             </div>
 
             {/* Mobile Redirect List */}
@@ -361,7 +361,7 @@ export default function Header() {
 
             <div className="text-center text-[10px] text-slate-500 font-medium flex items-center justify-center gap-1.5">
               <i className="fa-solid fa-shield-halved text-[#d4af37]"></i>
-              <span>18+ Only • Fairplay Verified &amp; Confidential</span>
+              <span>18+ Play Responsibly • 100% Safe &amp; Verified</span>
             </div>
           </div>
         </div>

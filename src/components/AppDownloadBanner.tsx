@@ -14,7 +14,7 @@ export default function AppDownloadBanner() {
             <div className="lg:col-span-7 space-y-4 sm:space-y-5">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00f2fe]/10 border border-[#00f2fe]/30 text-[#00f2fe] text-xs font-bold uppercase tracking-wider">
                 <i className="fa-brands fa-android text-sm"></i>
-                <span>Official Fairplay Android APK v5.4.2</span>
+                <span>Official Fairplay Android App</span>
               </div>
 
               <h2 className="text-xl sm:text-3xl md:text-4xl font-bold font-serif text-white leading-tight">
@@ -22,7 +22,7 @@ export default function AppDownloadBanner() {
               </h2>
 
               <p className="text-slate-300 text-xs sm:text-base leading-relaxed">
-                Take India's premier betting exchange everywhere you go. Enjoy ultra-fast odds updates, live streaming scorecards, biometric login security, and instant 1-tap WhatsApp withdrawals.
+                Take India's favorite betting app everywhere you go. Enjoy lightning-fast odds, ball-by-ball match updates, fingerprint login, and instant WhatsApp withdrawals.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-1 sm:pt-2">
@@ -32,7 +32,7 @@ export default function AppDownloadBanner() {
                 </div>
                 <div className="flex items-center gap-2.5 p-3 rounded-xl bg-black/40 border border-white/5 text-xs text-slate-300">
                   <i className="fa-solid fa-fingerprint text-[#25d366]"></i>
-                  <span>Biometric Security</span>
+                  <span>Fingerprint Login</span>
                 </div>
                 <div className="flex items-center gap-2.5 p-3 rounded-xl bg-black/40 border border-white/5 text-xs text-slate-300">
                   <i className="fa-solid fa-bell text-[#ff9040]"></i>

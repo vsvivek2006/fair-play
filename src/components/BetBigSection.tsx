@@ -27,7 +27,7 @@ export default function BetBigSection() {
             </h2>
 
             <p className="text-slate-300 text-xs sm:text-base leading-relaxed">
-              Step into the premier arena of online sports gaming. With Fairplay, get access to higher betting limits, instant market settlements, and exclusive VIP support for large accounts. Elevate your sports viewing into an exhilarating winning experience today!
+              Join India's favorite sports betting platform. Enjoy higher betting limits, instant winning payouts, and personalized VIP service. Turn your cricket passion into real winnings today!
             </p>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-1 sm:pt-2">

@@ -22,7 +22,7 @@ export default function HomePage() {
         description: 'Online Sports Betting & Cricket ID Provider in India',
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://www.fairplay1login.com/sitemap/?q={search_term_string}',
+          target: 'https://www.fairplay1login.com/?q={search_term_string}',
           'query-input': 'required name=search_term_string',
         },
       },

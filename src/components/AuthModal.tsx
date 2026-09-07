@@ -154,7 +154,7 @@ export default function AuthModal() {
                 Official VIP Portal
               </div>
               <div id="auth-modal-title" className="text-[11px] sm:text-xs text-slate-400">
-                Fast, Secure & 100% Confidential
+                Quick ID, 100% Safe &amp; Instant Payouts
               </div>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function AuthModal() {
                 Get Instant Betting ID in <span className="text-[#25d366]">2 Minutes</span>
               </h3>
               <p className="text-xs text-slate-300 max-w-sm mx-auto leading-relaxed">
-                Connect directly with our 24/7 verified WhatsApp agents for zero-wait registration, instant deposits, and 300% bonus activation.
+                Chat directly with our 24/7 team on WhatsApp to get your betting ID in 2 minutes with an instant 300% bonus!
               </p>
             </div>
 
@@ -235,7 +235,7 @@ export default function AuthModal() {
                 <div className="w-5 h-5 rounded-full bg-[#25d366]/20 text-[#25d366] flex items-center justify-center text-[10px]">
                   <i className="fa-solid fa-bolt"></i>
                 </div>
-                <span><strong>Instant UPI / IMPS Activation</strong> — Start in 2 mins</span>
+                <span><strong>Instant UPI &amp; GPay Deposits</strong> — Start playing in 2 mins</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-[#d4af37]/20 text-[#d4af37] flex items-center justify-center text-[10px]">
@@ -253,7 +253,7 @@ export default function AuthModal() {
                 <div className="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-[10px]">
                   <i className="fa-solid fa-user-shield"></i>
                 </div>
-                <span><strong>100% Confidential & Secure</strong> — No KYC paperwork</span>
+                <span><strong>100% Safe &amp; Private</strong> — No complicated paperwork</span>
               </div>
             </div>
 
@@ -302,7 +302,7 @@ export default function AuthModal() {
                 </div>
                 <h4 className="text-base font-bold text-white">Verification Successful!</h4>
                 <p className="text-xs text-slate-300">
-                  Connecting you to the secure 24/7 Fairplay Member Gateway...
+                  Connecting you to Fairplay live betting on WhatsApp...
                 </p>
               </div>
             ) : (

@@ -10,7 +10,7 @@ export const fairplayHubPage: PageData = {
   category: 'Fairplay',
   breadcrumb: [{ name: 'Home', url: '/' }, { name: 'Fairplay', url: '/fairplay/' }],
   intro:
-    'Welcome to the Fairplay hub — the central navigation point for everything related to the Fairplay platform. This page connects you to all major topic clusters, from app installation and account management to sports coverage and troubleshooting. Whether you are a new user or a seasoned community member, this hub helps you find exactly what you need.',
+    'Welcome to the Fairplay Hub — your official starting point for live sports betting, verified WhatsApp ID registration, fast UPI payments, and mobile app downloads. Whether you are placing your first cricket bet or exploring high-odds exchange markets, find all essential guides and resources right here.',
   sections: [
     {
       heading: 'What Is Fairplay?',
@@ -20,17 +20,17 @@ export const fairplayHubPage: PageData = {
       ],
     },
     {
-      heading: 'Platform Overview',
+      heading: 'Platform Highlights',
       paragraphs: [
-        'Fairplay is organized into several interconnected clusters, each serving a specific user need. The main clusters include the Fairplay core topic, app and download resources, login and account management, guides and tutorials, sports and IPL coverage, and legal information. Each cluster contains multiple pages with unique, in-depth content.',
-        'This hub page serves as the gateway to all of these clusters. Below, you will find a breakdown of each cluster with links to the key pages within them. Use these links to navigate to the topics that interest you most.',
+        'Fairplay is built from the ground up to give Indian sports bettors the highest odds, fastest deposits, and smoothest betting experience. Explore our specialized guides covering live match betting, Android APK setup, WhatsApp account activation, and 24/7 VIP assistance.',
+        'Use the quick links below to jump straight to the exact feature, bonus, or guide you need.',
       ],
     },
     {
-      heading: 'Fairplay Core Topic',
+      heading: 'Fairplay Features & Platform Guide',
       paragraphs: [
-        'The core Fairplay topic covers the platform itself — what it is, how it works, and what it offers. Key pages in this cluster include the Fairplay Guide, which provides a comprehensive walkthrough of the platform, and the Fairplay Features page, which breaks down each feature category in detail.',
-        'Other important pages include the Fairplay Overview for a high-level summary, Fairplay 2026 for the platform roadmap, and Fairplay Online for web-based usage. The Fairplay Latest Updates page keeps you informed about recent changes.',
+        'Learn everything about placing bets, understanding betting exchanges, and maximizing bonuses on Fairplay. The Fairplay Guide walks you through the entire experience, while Fairplay Features breaks down all odds formats, live score trackers, and betting limits.',
+        'Looking for upcoming tournaments? Check Fairplay 2026 for season schedules and new features, or explore Fairplay Online to start betting directly in your web browser.',
       ],
       subsections: [
         {
@@ -48,10 +48,10 @@ export const fairplayHubPage: PageData = {
       ],
     },
     {
-      heading: 'App and Download',
+      heading: 'Fairplay Mobile App & APK Download',
       paragraphs: [
-        'The app cluster covers everything related to the Fairplay mobile application. From downloading and installing the app to understanding APK files and keeping the app updated, this cluster provides comprehensive guidance for mobile users.',
-        'Key pages include the Fairplay App main page, the Fairplay Download page, the Fairplay APK Installation Guide, and the Fairplay App Features page. Whether you are installing the app for the first time or troubleshooting an update issue, these pages have you covered.',
+        'Place bets anytime, anywhere with the official Fairplay Android app. Enjoy fast finger-tap logins, push notifications for live wickets and odds shifts, and zero-lag live match streaming.',
+        'Follow our step-by-step Fairplay APK Installation Guide to safely download and install the official app in under 2 minutes.',
       ],
       subsections: [
         {
@@ -68,10 +68,10 @@ export const fairplayHubPage: PageData = {
       ],
     },
     {
-      heading: 'Login and Account',
+      heading: 'Instant ID, Login & Security',
       paragraphs: [
-        'The login and account cluster helps users with account creation, login, security, and troubleshooting. Whether you are registering for the first time, recovering a lost password, or securing your account, this cluster provides detailed, step-by-step guidance.',
-        'Key pages include the Fairplay Login page, Fairplay Register page, Fairplay Account Security page, and Fairplay Login Troubleshooting page. The Fairplay Password Help page is particularly useful if you have lost access to your account.',
+        'Getting your verified Fairplay betting ID takes only 2 minutes on WhatsApp. From your first login to secure password management, our account guides ensure your wallet balance and data stay 100% protected.',
+        'Need urgent help with your password or login credentials? Our Fairplay Password Help and Login Troubleshooting guides provide immediate solutions.',
       ],
       subsections: [
         {
@@ -88,10 +88,10 @@ export const fairplayHubPage: PageData = {
       ],
     },
     {
-      heading: 'Guides and Tutorials',
+      heading: 'Helpful Betting Guides & Tutorials',
       paragraphs: [
-        'The guides cluster provides in-depth tutorials covering every aspect of the Fairplay platform. From beginner guides to advanced troubleshooting, these pages help users get the most out of Fairplay.',
-        'Key pages include the Fairplay Beginner Guide for new users, the Fairplay User Guide for comprehensive usage instructions, the How Fairplay Works page for platform mechanics, and the Fairplay Troubleshooting page for resolving common issues.',
+        'Master the art of cricket and sports betting with our beginner-friendly tutorials. Learn how odds work, how to bet on sessions, and how to manage your bankroll smartly.',
+        'Whether you are completely new or looking for advanced exchange tips, our guides provide practical advice you can use immediately.',
       ],
       subsections: [
         {
@@ -108,10 +108,10 @@ export const fairplayHubPage: PageData = {
       ],
     },
     {
-      heading: 'Sports and IPL',
+      heading: 'Live Cricket, IPL & Sports Markets',
       paragraphs: [
-        'The sports cluster covers the sports content available on Fairplay, with a particular emphasis on cricket and the Indian Premier League. This cluster includes pages on IPL 2026 coverage, the IPL Guide, and general sports updates.',
-        'Key pages include Fairplay Sports, Fairplay IPL 2026, Fairplay IPL Guide, and Fairplay Sports Updates. These pages provide structured, easy-to-navigate sports content for fans.',
+        'Cricket is in our DNA. Fairplay brings you the best ball-by-ball odds for the Indian Premier League (IPL), International T20s, ODIs, Test cricket, football, and tennis.',
+        'Explore our dedicated Fairplay IPL 2026 and Sports Updates pages to follow match previews, player awards, and betting markets.',
       ],
       subsections: [
         {
@@ -177,7 +177,7 @@ export const fairplayGuidePage: PageData = {
     {
       heading: 'Navigating the Platform',
       paragraphs: [
-        'Fairplay is organized into clear sections that make navigation intuitive. The main hub page serves as the central point, connecting you to topic clusters covering the app, account management, guides, sports, and legal information. Each cluster contains multiple pages with unique, in-depth content.',
+        'Fairplay is designed for effortless navigation. Quickly jump between live sports betting, app downloads, account guides, and 24/7 WhatsApp customer support to get the answers you need in seconds.',
         'The header navigation bar provides quick access to the most important sections: Home, About, Fairplay, App, Login, Guides, Sports, Help, and Contact. On mobile devices, the navigation collapses into a menu that can be toggled with a tap.',
       ],
     },
@@ -356,16 +356,15 @@ export const fairplayOverviewPage: PageData = {
       ],
     },
     {
-      heading: 'Platform Structure',
+      heading: 'What You Can Do on Fairplay',
       paragraphs: [
-        'Fairplay is organized into six main clusters:',
-        'Core Pages — Home, About, Contact, FAQ, Help Center, Sitemap.',
-        'Fairplay Main Topic — The hub, guide, features, overview, and related pages.',
-        'App and Download — Everything about the mobile app, APK, and installation.',
-        'Login and Account — Registration, login, security, and troubleshooting.',
-        'Guides and Tutorials — Beginner guides, user guides, and troubleshooting.',
-        'Sports and IPL — Sports coverage, IPL 2026, and sports updates.',
-        'Legal and Trust — Privacy, terms, disclaimer, and policies.',
+        'Fairplay offers a complete digital betting and gaming platform for sports enthusiasts:',
+        'Live Sports & Cricket — Bet with high exchange odds on IPL, international matches, and worldwide tournaments.',
+        'Fast Mobile App — Download the official Android APK for one-tap mobile betting.',
+        'Instant WhatsApp ID — Register in 2 minutes with zero paperwork and instant UPI deposits.',
+        'Helpful Guides & Tutorials — Step-by-step guides for beginners, betting rules, and account safety.',
+        'Fast & Secure Payouts — Instant cash withdrawals directly to your bank account or UPI.',
+        '24/7 Dedicated Support — Round-the-clock assistance on WhatsApp whenever you need help.',
       ],
     },
     {
@@ -889,53 +888,50 @@ export const fairplayGlobalPage: PageData = {
 
 export const fairplayWebsitePage: PageData = {
   slug: '/fairplay-website/',
-  title: 'Fairplay Website — About the Web Platform',
-  metaDescription: 'Learn about the Fairplay website itself, its structure, design principles, navigation, and how to get the most out of the web-based platform experience.',
-  h1: 'The Fairplay Website — Structure and Navigation',
-  keywords: 'fairplay website, fairplay web platform, fairplay site, fairplay web design',
+  title: 'Fairplay Website — Online Sports Betting on Desktop & Mobile',
+  metaDescription: 'Access the official Fairplay website for live sports betting, cricket odds, instant UPI deposits, and immediate cash withdrawals on mobile and desktop.',
+  h1: 'The Fairplay Website — Fast, Live Sports Betting Online',
+  keywords: 'fairplay website, fairplay web platform, fairplay site, fairplay betting online',
   ogType: 'article',
   category: 'Website',
   breadcrumb: [{ name: 'Home', url: '/' }, { name: 'Fairplay', url: '/fairplay/' }, { name: 'Fairplay Website', url: '/fairplay-website/' }],
   intro:
-    'This page is about the Fairplay website itself — its structure, design, navigation, and the principles behind its construction. If you want to understand how the site is organized and how to find what you are looking for, this is the page for you.',
+    'Experience seamless online betting on the official Fairplay website. Whether on your phone browser or desktop PC, enjoy lightning-fast odds updates, instant UPI deposits, quick cashouts, and 24/7 WhatsApp VIP customer support.',
   sections: [
     {
-      heading: 'Site Structure',
+      heading: 'Smooth Betting Across All Devices',
       paragraphs: [
-        'The Fairplay website is organized into six main clusters, each covering a specific topic area. The main hub page at /fairplay/ serves as the central navigation point, connecting all clusters together. This topical authority structure helps users find related content naturally and ensures that every page is connected to the broader ecosystem.',
-        'The six clusters are: Core Pages, Fairplay Main Topic, App and Download, Login and Account, Guides and Tutorials, and Sports and IPL. Each cluster has its own set of pages with unique content, and pages within a cluster link to each other as well as to related pages in other clusters.',
+        'The Fairplay website is built for speed, simplicity, and performance. You can place bets on live cricket, football, tennis, and casino tables directly from your web browser without downloading heavy software.',
+        'With responsive layouts tailored for smartphones, tablets, and widescreen desktop monitors, you get full access to live scorecards, match statistics, and betting exchange odds wherever you are.',
       ],
     },
     {
-      heading: 'Design Principles',
+      heading: 'Key Benefits for Players',
       paragraphs: [
-        'The Fairplay website is designed with several key principles in mind:',
-        'Clarity: Navigation is intuitive, and content is well-organized with clear headings.',
-        'Accessibility: The site follows accessibility best practices for inclusive design.',
-        'Responsiveness: The layout adapts to all screen sizes, from mobile to desktop.',
-        'Performance: Pages are optimized for fast loading and efficient rendering.',
-        'SEO: Every page has unique metadata, proper heading hierarchy, and relevant internal links.',
+        'Instant Loading: Super-fast match page loading so you never miss sudden market swings or live ball-by-ball odds.',
+        '100% Secure & Encrypted: High-level 256-bit SSL encryption protects every deposit, withdrawal, and login.',
+        'Live Match Trackers: View active run rates, ball tracking, and wicket updates in real time.',
+        'Rapid UPI Banking: Deposit instantly via Google Pay, PhonePe, Paytm, or UPI and receive winning cash in minutes.',
+        'Full Screen Market View: On desktop, view multiple sports matches and your active betting slip side-by-side.',
       ],
     },
     {
-      heading: 'Navigation',
+      heading: 'Easy Navigation & Finding Matches',
       paragraphs: [
-        'The main navigation bar at the top of every page provides quick access to the most important sections. On desktop, all navigation links are visible. On mobile, they collapse into a hamburger menu. The footer contains a comprehensive set of links organized by category, providing an alternative navigation method.',
-        'Breadcrumbs at the top of each page show your current location within the site structure and provide links back to parent pages. The Sitemap page lists all public pages on the site for easy reference.',
+        'Finding your favorite match is effortless. Use the top navigation bar to jump directly into Live Matches, IPL tournaments, or Account Guides. On mobile, tap the quick menu to access your profile and betting history.',
+        'Need to verify match rules or learn session betting? Our straightforward guides explain odds formats and betting strategies in clear, simple language.',
       ],
     },
     {
-      heading: 'Internal Linking',
+      heading: 'Recommended Web Browsers',
       paragraphs: [
-        'Internal linking is a key part of the Fairplay website structure. Every major page links to 5 to 10 genuinely related pages, and every supporting article links back to its relevant cluster hub. Links use varied, natural anchor text and are placed where they are contextually appropriate — not forced where they are not relevant.',
-        'This internal linking architecture helps users discover related content and helps search engines understand the structure and relationships between pages.',
+        'For the fastest betting experience, we recommend using Google Chrome, Apple Safari, or Mozilla Firefox. Keep your browser updated and enable JavaScript so you can enjoy live odds movement and instant bet placement.',
       ],
     },
     {
-      heading: 'Content Organization',
+      heading: '24/7 Player Assistance',
       paragraphs: [
-        'Content on the Fairplay website is organized by topic and search intent. Every page has a unique title, meta description, and H1, and serves a specific user need. Pages are not duplicates of each other — each one provides genuinely different information that serves a distinct purpose.',
-        'The Fairplay Website Guide provides additional information about navigating and using the web platform effectively.',
+        'Have a question while betting on the website? Our dedicated support team is available round the clock on WhatsApp to assist with deposits, withdrawals, ID setup, or match rules.',
       ],
     },
   ],
@@ -943,7 +939,7 @@ export const fairplayWebsitePage: PageData = {
     { text: 'Fairplay Hub', url: '/fairplay/' },
     { text: 'Fairplay Website Guide', url: '/fairplay-website-guide/' },
     { text: 'Fairplay Online', url: '/fairplay-online/' },
-    { text: 'Sitemap', url: '/sitemap/' },
+    { text: 'Live Sports Betting', url: '/fairplay-sports/' },
     { text: 'Fairplay Guide', url: '/fairplay-guide/' },
     { text: 'Editorial Policy', url: '/editorial-policy/' },
     { text: 'Accessibility', url: '/accessibility/' },
