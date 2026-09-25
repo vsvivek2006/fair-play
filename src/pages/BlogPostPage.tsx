@@ -5,41 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { fetchPostBySlug, fetchPublishedPosts } from '@/services/blogService';
 import type { BlogPost } from '@/types/BlogPost';
 import { SITE_CONFIG } from '@/config/site';
-
-function parseContentToSections(content: string[] | string): { heading: string; paragraphs: string[] }[] {
-  let rawText = '';
-  if (Array.isArray(content)) {
-    rawText = content.join('\n\n');
-  } else {
-    rawText = String(content || '');
-  }
-
-  const sections: { heading: string; paragraphs: string[] }[] = [];
-  const lines = rawText.split('\n');
-  let currentHeading = 'Overview';
-  let currentParas: string[] = [];
-
-  for (const line of lines) {
-    const trimmed = line.trim();
-    if (!trimmed) continue;
-
-    if (trimmed.startsWith('## ') || trimmed.startsWith('### ')) {
-      if (currentParas.length > 0) {
-        sections.push({ heading: currentHeading, paragraphs: [...currentParas] });
-        currentParas = [];
-      }
-      currentHeading = trimmed.replace(/^#+\s+/, '');
-    } else {
-      currentParas.push(trimmed);
-    }
-  }
-
-  if (currentParas.length > 0) {
-    sections.push({ heading: currentHeading, paragraphs: currentParas });
-  }
-
-  return sections;
-}
+import { renderContentToHtml } from '@/lib/contentRenderer';
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -112,8 +78,6 @@ export default function BlogPostPage() {
       </div>
     );
   }
-
-  const sections = parseContentToSections(post.content);
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -216,7 +180,9 @@ export default function BlogPostPage() {
                 alt={post.title}
                 className="w-full max-h-[460px] object-cover"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/images/blog-online-cricket-betting.jpg';
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = '/images/blog-online-cricket-betting.jpg';
                 }}
               />
             </div>
@@ -229,36 +195,11 @@ export default function BlogPostPage() {
             </div>
           )}
 
-          {/* Article Body Content */}
-          <div className="space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
-            {sections.map((sec, idx) => (
-              <section key={idx} className="space-y-4">
-                {sec.heading && sec.heading !== 'Overview' && (
-                  <h2 className="text-xl sm:text-2xl font-bold font-serif text-white tracking-tight pt-4 border-t border-white/[0.06] text-[#f3e5ab]">
-                    {sec.heading}
-                  </h2>
-                )}
-                {sec.paragraphs.map((p, pIdx) => {
-                  // Bullet lists
-                  if (p.startsWith('- ') || p.startsWith('* ') || /^[0-9]+\.\s/.test(p)) {
-                    return (
-                      <div key={pIdx} className="flex items-start gap-2.5 pl-2 my-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37] mt-2 shrink-0" />
-                        <span className="text-slate-200">
-                          {p.replace(/^[-*]\s+|[0-9]+\.\s+/, '')}
-                        </span>
-                      </div>
-                    );
-                  }
-                  return (
-                    <p key={pIdx} className="text-slate-200 leading-relaxed">
-                      {p}
-                    </p>
-                  );
-                })}
-              </section>
-            ))}
-          </div>
+          {/* Article Body Content (Growth-Service Architecture: Clean, Sanitized Semantic HTML) */}
+          <div
+            className="article-content max-w-none space-y-6"
+            dangerouslySetInnerHTML={{ __html: renderContentToHtml(post.content) }}
+          />
 
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (

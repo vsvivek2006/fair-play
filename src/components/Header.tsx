@@ -8,34 +8,31 @@ interface NavItem {
   path: string;
   isHash?: boolean;
   icon: string;
-  iconColor?: string;
   badge?: {
     text: string;
     className: string;
   };
 }
 
-// Only the most useful, high-value redirect links for players
+// Exactly the original high-value redirect links for players, balanced and uncluttered
 const navItems: NavItem[] = [
   {
     label: 'Live Matches',
     path: '/#live-matches',
     isHash: true,
     icon: 'fa-solid fa-satellite-dish',
-    iconColor: 'text-[#00f2fe]',
     badge: {
       text: 'LIVE',
-      className: 'bg-[#00f2fe] text-black font-black animate-pulse shadow-[0_0_8px_rgba(0,242,254,0.6)]',
+      className: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30',
     },
   },
   {
     label: 'IPL 2026',
     path: '/fairplay-ipl-2026/',
     icon: 'fa-solid fa-trophy',
-    iconColor: 'text-[#d4af37]',
     badge: {
       text: 'HOT',
-      className: 'bg-gradient-to-r from-[#ff6b18] to-[#ffb574] text-black font-black shadow-[0_0_8px_rgba(255,107,24,0.6)]',
+      className: 'bg-[#d4af37]/25 text-[#f3e5ab] border border-[#d4af37]/40',
     },
   },
   {
@@ -43,31 +40,26 @@ const navItems: NavItem[] = [
     path: '/#casino',
     isHash: true,
     icon: 'fa-solid fa-dice',
-    iconColor: 'text-[#ff416c]',
   },
   {
     label: 'Download App',
     path: '/fairplay-app/',
     icon: 'fa-brands fa-android',
-    iconColor: 'text-[#25d366]',
   },
   {
     label: 'Login Guide',
     path: '/fairplay-login/',
     icon: 'fa-solid fa-shield-halved',
-    iconColor: 'text-slate-300',
   },
   {
     label: 'Blog',
     path: '/blogs/',
     icon: 'fa-solid fa-newspaper',
-    iconColor: 'text-[#f3e5ab]',
   },
   {
     label: 'FAQ & Help',
     path: '/faq/',
     icon: 'fa-solid fa-circle-question',
-    iconColor: 'text-[#38bdf8]',
   },
 ];
 
@@ -117,12 +109,12 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#0a0d14]/95 backdrop-blur-2xl border-b border-[#d4af37]/25 shadow-[0_12px_35px_rgba(0,0,0,0.85)] py-2.5 sm:py-3'
-            : 'bg-[#0a0d14]/85 backdrop-blur-md border-b border-white/[0.08] py-3 sm:py-4'
+            ? 'bg-[#0a0d14]/95 backdrop-blur-2xl border-b border-[#d4af37]/25 shadow-[0_12px_35px_rgba(0,0,0,0.85)] py-2 sm:py-2.5'
+            : 'bg-[#0a0d14]/90 backdrop-blur-md border-b border-white/[0.08] py-2.5 sm:py-3.5'
         }`}
       >
         {/* Top luxury hairline glow */}
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#d4af37]/50 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-3 sm:px-6 flex items-center justify-between gap-2 sm:gap-4">
           {/* Logo */}
@@ -130,31 +122,41 @@ export default function Header() {
             <img
               src="/images/logo.png"
               alt="Fairplay"
-              className="h-8 sm:h-9 md:h-11 w-auto max-w-[140px] sm:max-w-[170px] md:max-w-none object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-7 sm:h-8 md:h-10 w-auto max-w-[130px] sm:max-w-[160px] md:max-w-none object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
-          {/* Desktop Navigation Bar (Only Most Useful Links) */}
-          <nav className="hidden lg:flex items-center bg-white/[0.03] border border-white/[0.07] rounded-full p-1 shadow-inner">
+          {/* Desktop Navigation Bar (Jaisa pehle tha waisa hi, uncluttered & sleek) */}
+          <nav className="hidden lg:flex items-center bg-white/[0.03] border border-white/[0.07] rounded-full p-1 shadow-inner backdrop-blur-md">
             {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
+              const isActive =
+                item.path.startsWith('/#')
+                  ? location.pathname === '/' && location.hash === item.path.replace('/', '')
+                  : location.pathname === item.path ||
+                    (item.path === '/blogs/' && location.pathname.startsWith('/blog'));
 
               return (
                 <Link
                   key={item.label}
                   to={item.path}
                   onClick={() => item.isHash && handleHashNavClick(item.path)}
-                  className={`px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full text-xs xl:text-sm font-semibold flex items-center gap-1.5 transition-all duration-200 group relative ${
+                  className={`px-2.5 py-1.5 xl:px-3.5 xl:py-1.5 rounded-full text-xs xl:text-[13px] font-semibold flex items-center gap-1.5 transition-all duration-200 group relative select-none ${
                     isActive
                       ? 'bg-gradient-to-r from-[#d4af37]/25 to-[#f3e5ab]/10 border border-[#d4af37]/40 text-[#f3e5ab] shadow-[0_0_15px_rgba(212,175,55,0.25)] font-bold'
                       : 'text-slate-300 hover:text-[#f3e5ab] hover:bg-white/[0.05]'
                   }`}
                 >
-                  <i className={`${item.icon} text-xs ${item.iconColor || 'text-slate-400'} group-hover:scale-110 transition-transform`} />
+                  <i
+                    className={`${item.icon} text-[11px] xl:text-xs transition-colors ${
+                      isActive ? 'text-[#d4af37]' : 'text-slate-400 group-hover:text-[#d4af37]'
+                    }`}
+                  />
                   <span>{item.label}</span>
 
                   {item.badge && (
-                    <span className={`text-[9px] px-1.5 py-0.2 rounded-full leading-tight uppercase ${item.badge.className}`}>
+                    <span
+                      className={`text-[8px] xl:text-[9px] px-1.5 py-0.5 rounded-full leading-none font-bold uppercase tracking-wider ${item.badge.className}`}
+                    >
                       {item.badge.text}
                     </span>
                   )}
@@ -163,12 +165,12 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Desktop Action Buttons (Interactive Auth Modal + WhatsApp Link) */}
+          {/* Desktop Action Buttons (Login, Register +300%, WhatsApp VIP) */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0">
             {/* Login Button */}
             <button
               onClick={() => openAuthModal('login')}
-              className="border border-[#d4af37]/40 text-[#f3e5ab] hover:bg-[#d4af37]/15 hover:border-[#d4af37] px-4 py-2 rounded-full text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+              className="border border-[#d4af37]/40 text-[#f3e5ab] hover:bg-[#d4af37]/15 hover:border-[#d4af37] px-3.5 xl:px-4 py-1.5 xl:py-2 rounded-full text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
             >
               <i className="fa-solid fa-right-to-bracket text-xs text-[#d4af37]"></i>
               <span>Login</span>
@@ -177,7 +179,7 @@ export default function Header() {
             {/* Register Button */}
             <button
               onClick={() => openAuthModal('register')}
-              className="btn btn-gold btn-shimmer text-xs px-4 xl:px-5 py-2 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.35)] font-extrabold flex items-center gap-1.5"
+              className="btn btn-gold btn-shimmer text-xs px-4 xl:px-5 py-1.5 xl:py-2 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.35)] font-extrabold flex items-center gap-1.5 cursor-pointer"
             >
               <i className="fa-solid fa-gift text-xs"></i>
               <span>Register</span>
@@ -191,11 +193,11 @@ export default function Header() {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-[#25d366]/20 border border-[#25d366]/50 text-[#25d366] hover:bg-[#25d366] hover:text-white flex items-center justify-center text-sm transition-all shadow-[0_0_12px_rgba(37,211,102,0.3)]"
-              aria-label="Connect on WhatsApp"
-              title="Connect on WhatsApp"
+              className="w-8 h-8 rounded-full bg-[#25d366]/20 border border-[#25d366]/50 text-[#25d366] hover:bg-[#25d366] hover:text-black flex items-center justify-center transition-all shadow-sm cursor-pointer"
+              title="24/7 WhatsApp VIP ID"
+              aria-label="Contact WhatsApp VIP"
             >
-              <i className="fa-brands fa-whatsapp"></i>
+              <i className="fa-brands fa-whatsapp text-sm"></i>
             </a>
           </div>
 
@@ -204,7 +206,7 @@ export default function Header() {
             {/* Quick Register CTA on Mobile */}
             <button
               onClick={() => openAuthModal('register')}
-              className="btn btn-gold btn-shimmer text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1 shadow"
+              className="btn btn-gold btn-shimmer text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1 shadow cursor-pointer"
             >
               <i className="fa-solid fa-gift text-[10px]"></i>
               <span>Register</span>
@@ -213,7 +215,7 @@ export default function Header() {
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={toggleMobileMenu}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/[0.05] border border-white/10 text-white flex items-center justify-center text-base hover:border-[#d4af37]/50 hover:bg-[#d4af37]/10 transition-colors"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/[0.05] border border-white/10 text-white flex items-center justify-center text-base hover:border-[#d4af37]/50 hover:bg-[#d4af37]/10 transition-colors cursor-pointer"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -223,7 +225,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu Drawer: Luxury, Clean, Responsive */}
+      {/* Mobile Menu Drawer: Luxury, Clean, Responsive (Jaisa pehle tha) */}
       <div
         className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
           mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -247,7 +249,7 @@ export default function Header() {
               <img src="/images/logo.png" alt="Fairplay" className="h-8 w-auto object-contain" />
               <button
                 onClick={closeMobileMenu}
-                className="w-8 h-8 rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-[#d4af37]/50 flex items-center justify-center"
+                className="w-8 h-8 rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-[#d4af37]/50 flex items-center justify-center cursor-pointer"
                 aria-label="Close menu"
               >
                 <i className="fa-solid fa-xmark text-sm"></i>
@@ -270,7 +272,7 @@ export default function Header() {
                   closeMobileMenu();
                   openAuthModal('login');
                 }}
-                className="btn btn-outline text-xs py-2.5 justify-center w-full"
+                className="btn btn-outline text-xs py-2.5 justify-center w-full cursor-pointer"
               >
                 <i className="fa-solid fa-right-to-bracket text-xs mr-1 text-[#d4af37]"></i>
                 <span>Login</span>
@@ -280,7 +282,7 @@ export default function Header() {
                   closeMobileMenu();
                   openAuthModal('register');
                 }}
-                className="btn btn-gold btn-shimmer text-xs py-2.5 justify-center w-full shadow font-bold"
+                className="btn btn-gold btn-shimmer text-xs py-2.5 justify-center w-full shadow font-bold cursor-pointer"
               >
                 <i className="fa-solid fa-user-plus text-xs mr-1"></i>
                 <span>Register</span>
@@ -316,7 +318,11 @@ export default function Header() {
 
               {/* Useful Links */}
               {navItems.map((item) => {
-                const isActive = location.pathname === item.path;
+                const isActive =
+                  item.path.startsWith('/#')
+                    ? location.pathname === '/' && location.hash === item.path.replace('/', '')
+                    : location.pathname === item.path ||
+                      (item.path === '/blogs/' && location.pathname.startsWith('/blog'));
 
                 return (
                   <Link
@@ -334,14 +340,14 @@ export default function Header() {
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-7 h-7 rounded-lg bg-white/[0.04] flex items-center justify-center text-xs">
-                        <i className={`${item.icon} ${item.iconColor || 'text-[#d4af37]'}`}></i>
+                        <i className={`${item.icon} ${isActive ? 'text-[#d4af37]' : 'text-slate-400'}`}></i>
                       </div>
                       <span className="text-xs sm:text-sm font-semibold">{item.label}</span>
                     </div>
 
                     <div className="flex items-center gap-2">
                       {item.badge && (
-                        <span className={`text-[9px] px-1.5 py-0.2 rounded-full uppercase ${item.badge.className}`}>
+                        <span className={`text-[9px] px-1.5 py-0.5 rounded-full uppercase ${item.badge.className}`}>
                           {item.badge.text}
                         </span>
                       )}
@@ -359,7 +365,7 @@ export default function Header() {
               href={SITE_CONFIG.whatsappSupportUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-whatsapp w-full justify-center text-xs py-3 font-bold shadow-xl flex items-center gap-2"
+              className="btn btn-whatsapp w-full justify-center text-xs py-3 font-bold shadow-xl flex items-center gap-2 cursor-pointer"
             >
               <i className="fa-brands fa-whatsapp text-lg"></i>
               <span>24/7 WhatsApp VIP Support</span>
