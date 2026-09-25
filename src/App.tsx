@@ -1,3 +1,5 @@
+import BlogListPage from '@/pages/BlogListPage';
+import BlogPostPage from '@/pages/BlogPostPage';
 import { Routes, Route, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -132,6 +134,14 @@ function App() {
           <Routes>
             {/* Homepage with all target luxury components */}
             <Route path="/" element={<HomePage />} />
+
+            {/* Official Blog & Guides */}
+            <Route path="/blog/" element={<BlogListPage />} />
+            <Route path="/blogs/" element={<BlogListPage />} />
+            <Route path="/blog/:slug/" element={<BlogPostPage />} />
+            <Route path="/blogs/:slug/" element={<BlogPostPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/blogs/:slug" element={<BlogPostPage />} />
 
             {/* Core Pages */}
             <Route path="/about/" element={<PageRenderer data={aboutPage} />} />

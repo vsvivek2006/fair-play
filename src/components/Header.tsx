@@ -58,6 +58,12 @@ const navItems: NavItem[] = [
     iconColor: 'text-slate-300',
   },
   {
+    label: 'Blog',
+    path: '/blogs/',
+    icon: 'fa-solid fa-newspaper',
+    iconColor: 'text-[#f3e5ab]',
+  },
+  {
     label: 'FAQ & Help',
     path: '/faq/',
     icon: 'fa-solid fa-circle-question',
