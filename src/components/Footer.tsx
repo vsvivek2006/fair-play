@@ -57,6 +57,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/blogs/" className="hover:text-[#d4af37] transition-colors font-medium text-[#f3e5ab]">
+                  Blog &amp; Betting Guides
+                </Link>
+              </li>
+              <li>
                 <Link to="/about/" className="hover:text-[#d4af37] transition-colors">
                   About Fairplay
                 </Link>

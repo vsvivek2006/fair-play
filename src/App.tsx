@@ -136,7 +136,9 @@ function App() {
             <Route path="/" element={<HomePage />} />
 
             {/* Official Blog & Guides */}
+            <Route path="/blog" element={<BlogListPage />} />
             <Route path="/blog/" element={<BlogListPage />} />
+            <Route path="/blogs" element={<BlogListPage />} />
             <Route path="/blogs/" element={<BlogListPage />} />
             <Route path="/blog/:slug/" element={<BlogPostPage />} />
             <Route path="/blogs/:slug/" element={<BlogPostPage />} />
