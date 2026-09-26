@@ -1,4 +1,40 @@
+# Robots.txt for Fairplay (fairplaylive.io)
+# RFC 9309 compliant
+# Optimized for Google Search Essentials & AI Retrieval (GEO)
+
+# Default: Allow all legitimate web crawlers to access all public pages and assets
 User-agent: *
 Allow: /
 
+# Traditional Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI Search & Retrieval Crawlers (SearchGPT, ChatGPT Browsing, Perplexity, Claude Search)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Sitemap Index
 Sitemap: https://fairplaylive.io/sitemap.xml
+
+# LLM & Machine-Readable Knowledge
+# https://fairplaylive.io/llms.txt
+# https://fairplaylive.io/llms-full.txt
