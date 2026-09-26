@@ -104,6 +104,7 @@ export default function CasinoArcade() {
                 <img
                   src={game.image}
                   alt={game.name}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -117,9 +118,9 @@ export default function CasinoArcade() {
               {/* Card Footer with Provider & Play Arrow */}
               <div className="p-2.5 sm:p-3.5 bg-gradient-to-r from-[#4c1d95] to-[#311068] text-white flex items-center justify-between border-t border-white/10">
                 <div className="min-w-0 pr-1">
-                  <h4 className="font-bold text-xs sm:text-sm text-slate-100 tracking-wide truncate">
+                  <h3 className="font-bold text-xs sm:text-sm text-slate-100 tracking-wide truncate">
                     {game.name}
-                  </h4>
+                  </h3>
                   <span className="text-[9px] sm:text-[10px] text-purple-200 tracking-wider uppercase font-semibold block truncate">
                     {game.provider}
                   </span>

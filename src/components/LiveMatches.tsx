@@ -115,6 +115,7 @@ export default function LiveMatches() {
             <img
               src="/images/teen-patti.png"
               alt="Teen Patti Live"
+              loading="lazy"
               className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
@@ -135,6 +136,7 @@ export default function LiveMatches() {
             <img
               src="/images/casino.png"
               alt="Live Casino"
+              loading="lazy"
               className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
@@ -155,6 +157,7 @@ export default function LiveMatches() {
             <img
               src="/images/cricket.png"
               alt="Cricket Sports"
+              loading="lazy"
               className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
@@ -243,7 +246,7 @@ export default function LiveMatches() {
                     )}
                     <span className="text-xs text-slate-400 font-medium">{match.league}</span>
                   </div>
-                  <h4 className="text-white font-bold text-base sm:text-lg">{match.teams}</h4>
+                  <h3 className="text-white font-bold text-base sm:text-lg">{match.teams}</h3>
                   <div className="text-xs text-[#f3e5ab] mt-1 flex items-center gap-1.5 font-medium">
                     <i className="fa-regular fa-clock text-[#d4af37]"></i>
                     <span>{match.time}</span>

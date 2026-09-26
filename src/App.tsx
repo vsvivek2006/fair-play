@@ -1,5 +1,4 @@
-import BlogListPage from '@/pages/BlogListPage';
-import BlogPostPage from '@/pages/BlogPostPage';
+import { lazy, Suspense } from 'react';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -11,6 +10,9 @@ import HomePage from '@/pages/HomePage';
 import { AuthModalProvider } from '@/context/AuthModalContext';
 import AuthModal from '@/components/AuthModal';
 import ScrollToTop from '@/components/ScrollToTop';
+
+const BlogListPage = lazy(() => import('@/pages/BlogListPage'));
+const BlogPostPage = lazy(() => import('@/pages/BlogPostPage'));
 
 import {
   aboutPage,
@@ -131,7 +133,8 @@ function App() {
       <div className="min-h-screen flex flex-col bg-[#0a0d14] text-white">
         <Header />
         <main className="flex-1">
-          <Routes>
+          <Suspense fallback={<div className="min-h-screen bg-[#0a0d14]" />}>
+            <Routes>
             {/* Homepage with all target luxury components */}
             <Route path="/" element={<HomePage />} />
 
@@ -225,7 +228,8 @@ function App() {
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </main>
+        </Suspense>
+      </main>
         <Footer />
         <WhatsAppFloat />
         <StickyBottomNav />

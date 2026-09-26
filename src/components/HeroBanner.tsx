@@ -17,9 +17,9 @@ const slides: Slide[] = [
   {
     image: '/images/home-banner-1.jpg',
     subtitle: "India's #1 Trusted Betting ID Provider",
-    titlePrefix: 'Experience Premium',
-    titleHighlight: 'Online Sports Betting',
-    desc: 'Get your verified online betting ID instantly. Unmatched odds, 24/7 instant withdrawals, and live match coverage.',
+    titlePrefix: 'Fairplay Official ID —',
+    titleHighlight: 'Online Cricket & Sports Betting',
+    desc: 'Get your verified Fairplay betting ID instantly. Unmatched sports odds, live IPL 2026 coverage, 24/7 instant withdrawals, and round-the-clock WhatsApp support.',
     primaryCta: 'Register Now',
     primaryIcon: 'fa-user-plus',
   },

@@ -90,7 +90,7 @@ export default function FAQSection() {
         {/* WhatsApp Help CTA banner below FAQ */}
         <div className="mt-10 sm:mt-12 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-[#121826] to-[#0d1424] border border-[#d4af37]/30 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
-            <h4 className="text-white font-bold text-sm sm:text-base font-serif">Still have questions?</h4>
+            <h3 className="text-white font-bold text-sm sm:text-base font-serif">Still have questions?</h3>
             <p className="text-slate-400 text-xs mt-0.5">
               Our support specialists are available on WhatsApp 24/7/365.
             </p>
