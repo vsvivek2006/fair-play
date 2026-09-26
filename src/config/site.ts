@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
-  name: 'Fairplay',
+  name: 'FairPlay Live',
   tagline: 'Online Sports Betting & Cricket ID Provider in India',
-  siteUrl: 'https://www.fairplay1login.com',
+  siteUrl: 'https://fairplaylive.io',
   whatsappUrl: 'https://wa.link/fairplaylive',
   whatsappRegisterUrl: 'https://wa.link/fairplaylive',
   whatsappLoginUrl: 'https://wa.link/fairplaylive',

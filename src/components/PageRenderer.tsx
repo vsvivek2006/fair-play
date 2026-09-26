@@ -14,7 +14,7 @@ function breadcrumbStructuredData(items: { name: string; url: string }[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://www.fairplay1login.com${item.url}`,
+      item: `https://fairplaylive.io${item.url}`,
     })),
   };
 }
@@ -87,23 +87,23 @@ export default function PageRenderer({ data }: PageRendererProps) {
     '@type': 'Article',
     headline: data.h1,
     description: data.metaDescription,
-    image: 'https://www.fairplay1login.com/images/logo.png',
+    image: 'https://fairplaylive.io/images/logo.png',
     author: {
       '@type': 'Organization',
       name: 'Fairplay Editorial Team',
-      url: 'https://www.fairplay1login.com/',
+      url: 'https://fairplaylive.io/',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Fairplay',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.fairplay1login.com/images/logo.png',
+        url: 'https://fairplaylive.io/images/logo.png',
       },
     },
     datePublished: '2026-01-01T00:00:00+05:30',
     dateModified: '2026-09-07T12:00:00+05:30',
-    mainEntityOfPage: `https://www.fairplay1login.com${data.slug}`,
+    mainEntityOfPage: `https://fairplaylive.io${data.slug}`,
   };
 
   const allStructuredData = [

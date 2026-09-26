@@ -152,7 +152,7 @@ export const fairplayHubPage: PageData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Fairplay',
-    url: 'https://fairplay1login.com/',
+    url: 'https://fairplaylive.io/',
     description: 'A digital sports platform for engagement, content, and community.',
   },
 };

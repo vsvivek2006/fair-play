@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.fairplay1login.com/sitemap.xml
+Sitemap: https://fairplaylive.io/sitemap.xml

@@ -9,8 +9,8 @@ export interface SEOProps {
   structuredData?: object;
 }
 
-const SITE_URL = 'https://www.fairplay1login.com';
-const SITE_NAME = 'Fairplay';
+const SITE_URL = 'https://fairplaylive.io';
+const SITE_NAME = 'FairPlay Live';
 
 export default function SEO({
   title,

@@ -92,11 +92,11 @@ export const homePage: PageData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Fairplay',
-    url: 'https://fairplay1login.com/',
+    url: 'https://fairplaylive.io/',
     description: 'Your complete guide to the Fairplay digital sports platform.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://fairplay1login.com/?q={search_term_string}',
+      target: 'https://fairplaylive.io/?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   },

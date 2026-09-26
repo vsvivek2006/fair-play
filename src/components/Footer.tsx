@@ -162,7 +162,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>&copy; {new Date().getFullYear()} Fairplay (fairplay1login.com). All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Fairplay (fairplaylive.io). All rights reserved.</p>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
             <Link to="/privacy-policy/" className="hover:text-[#d4af37] transition-colors">
               Privacy Policy

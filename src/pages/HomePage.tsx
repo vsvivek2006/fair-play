@@ -16,24 +16,24 @@ export default function HomePage() {
     '@graph': [
       {
         '@type': 'WebSite',
-        '@id': 'https://www.fairplay1login.com/#website',
-        url: 'https://www.fairplay1login.com/',
+        '@id': 'https://fairplaylive.io/#website',
+        url: 'https://fairplaylive.io/',
         name: 'Fairplay',
         description: 'Online Sports Betting & Cricket ID Provider in India',
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://www.fairplay1login.com/?q={search_term_string}',
+          target: 'https://fairplaylive.io/?q={search_term_string}',
           'query-input': 'required name=search_term_string',
         },
       },
       {
         '@type': 'Organization',
-        '@id': 'https://www.fairplay1login.com/#organization',
+        '@id': 'https://fairplaylive.io/#organization',
         name: 'Fairplay',
-        url: 'https://www.fairplay1login.com/',
+        url: 'https://fairplaylive.io/',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://www.fairplay1login.com/images/logo.png',
+          url: 'https://fairplaylive.io/images/logo.png',
         },
         contactPoint: {
           '@type': 'ContactPoint',
@@ -45,7 +45,7 @@ export default function HomePage() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://www.fairplay1login.com/#faq',
+        '@id': 'https://fairplaylive.io/#faq',
         mainEntity: (faqPage.faqs || []).map((faq) => ({
           '@type': 'Question',
           name: faq.question,
