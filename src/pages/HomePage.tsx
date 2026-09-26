@@ -35,13 +35,7 @@ export default function HomePage() {
           '@type': 'ImageObject',
           url: 'https://fairplaylive.io/images/logo.png',
         },
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+919999999999',
-          contactType: 'customer service',
-          availableLanguage: ['English', 'Hindi'],
-          contactOption: 'TollFree',
-        },
+        sameAs: ['https://wa.link/fairplaylive'],
       },
       {
         '@type': 'FAQPage',
@@ -69,7 +63,7 @@ export default function HomePage() {
         structuredData={structuredData}
       />
 
-      <main className="w-full">
+      <div className="w-full">
         {/* 1. Hero Slider */}
         <HeroBanner />
 
@@ -96,7 +90,7 @@ export default function HomePage() {
 
         {/* 9. FAQ Accordion */}
         <FAQSection />
-      </main>
+      </div>
     </>
   );
 }

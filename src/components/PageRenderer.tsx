@@ -81,34 +81,60 @@ export default function PageRenderer({ data }: PageRendererProps) {
     return Math.max(2, Math.ceil(words / 180));
   }, [data]);
 
-  // Rich Article Structured Data Schema
-  const articleSchema = {
+  // Dynamic Schema.org Type Determination
+  let schemaType = 'Article';
+  const slug = data.slug.toLowerCase();
+  const category = (data.category || '').toLowerCase();
+
+  if (slug === '/about/') {
+    schemaType = 'AboutPage';
+  } else if (slug === '/contact/') {
+    schemaType = 'ContactPage';
+  } else if (slug === '/faq/') {
+    schemaType = 'FAQPage';
+  } else if (
+    category.includes('legal') ||
+    category.includes('policy') ||
+    slug.includes('policy') ||
+    slug === '/terms/' ||
+    slug === '/disclaimer/' ||
+    slug === '/accessibility/'
+  ) {
+    schemaType = 'WebPage';
+  }
+
+  // Schema object
+  const pageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': schemaType,
+    name: data.h1,
     headline: data.h1,
     description: data.metaDescription,
     image: 'https://fairplaylive.io/images/logo.png',
-    author: {
-      '@type': 'Organization',
-      name: 'Fairplay Editorial Team',
-      url: 'https://fairplaylive.io/',
-    },
     publisher: {
       '@type': 'Organization',
       name: 'Fairplay',
+      url: 'https://fairplaylive.io/',
       logo: {
         '@type': 'ImageObject',
         url: 'https://fairplaylive.io/images/logo.png',
       },
     },
-    datePublished: '2026-01-01T00:00:00+05:30',
-    dateModified: '2026-09-07T12:00:00+05:30',
+    ...(schemaType === 'Article'
+      ? {
+          author: {
+            '@type': 'Organization',
+            name: 'Fairplay Editorial Team',
+            url: 'https://fairplaylive.io/',
+          },
+        }
+      : {}),
     mainEntityOfPage: `https://fairplaylive.io${data.slug}`,
   };
 
   const allStructuredData = [
     breadcrumbStructuredData(data.breadcrumb),
-    articleSchema,
+    pageSchema,
     ...(data.structuredData ? [data.structuredData] : []),
     ...(data.faqs && data.faqs.length
       ? [

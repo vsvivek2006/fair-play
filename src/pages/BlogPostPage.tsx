@@ -79,12 +79,37 @@ export default function BlogPostPage() {
     );
   }
 
-  const structuredData = {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `${SITE_CONFIG.siteUrl}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `${SITE_CONFIG.siteUrl}/blogs/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `${SITE_CONFIG.siteUrl}/blog/${post.slug}/`,
+      },
+    ],
+  };
+
+  const blogPostingSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt || post.seo_description,
-    image: post.cover_image,
+    image: post.cover_image || `${SITE_CONFIG.siteUrl}/images/blog-online-cricket-betting.jpg`,
     author: {
       '@type': 'Person',
       name: post.author || 'FairPlay Desk',
@@ -93,10 +118,19 @@ export default function BlogPostPage() {
       '@type': 'Organization',
       name: SITE_CONFIG.name,
       url: SITE_CONFIG.siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_CONFIG.siteUrl}/images/logo.png`,
+      },
     },
     datePublished: post.published_at || post.created_at,
-    dateModified: post.updated_at || post.created_at,
+    dateModified: post.updated_at || post.published_at || post.created_at,
     mainEntityOfPage: `${SITE_CONFIG.siteUrl}/blog/${post.slug}/`,
+  };
+
+  const fullSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [breadcrumbSchema, blogPostingSchema],
   };
 
   return (
@@ -107,7 +141,8 @@ export default function BlogPostPage() {
         canonical={`/blog/${post.slug}/`}
         keywords={post.tags?.join(', ') || 'Fairplay, cricket betting, casino'}
         ogType="article"
-        structuredData={structuredData}
+        image={post.cover_image}
+        structuredData={fullSchema}
       />
 
       {/* Top Reading Progress Bar */}

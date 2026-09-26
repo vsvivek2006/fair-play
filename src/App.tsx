@@ -1,6 +1,6 @@
 import BlogListPage from '@/pages/BlogListPage';
 import BlogPostPage from '@/pages/BlogPostPage';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageRenderer from '@/components/PageRenderer';
@@ -102,7 +102,7 @@ function NotFound() {
       <SEO
         title="Page Not Found | Fairplay"
         description="The page you are looking for does not exist. Explore our betting guides or return to homepage."
-        canonical="/404/"
+        robots="noindex, nofollow"
       />
       <div className="max-w-2xl mx-auto px-4 py-32 text-center">
         <div className="w-20 h-20 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] text-3xl mx-auto flex items-center justify-center mb-6">
@@ -135,10 +135,10 @@ function App() {
             {/* Homepage with all target luxury components */}
             <Route path="/" element={<HomePage />} />
 
-            {/* Official Blog & Guides */}
-            <Route path="/blog" element={<BlogListPage />} />
-            <Route path="/blog/" element={<BlogListPage />} />
-            <Route path="/blogs" element={<BlogListPage />} />
+            {/* Official Blog & Guides with Canonical Redirects */}
+            <Route path="/blog" element={<Navigate to="/blogs/" replace />} />
+            <Route path="/blog/" element={<Navigate to="/blogs/" replace />} />
+            <Route path="/blogs" element={<Navigate to="/blogs/" replace />} />
             <Route path="/blogs/" element={<BlogListPage />} />
             <Route path="/blog/:slug/" element={<BlogPostPage />} />
             <Route path="/blogs/:slug/" element={<BlogPostPage />} />

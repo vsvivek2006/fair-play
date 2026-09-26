@@ -62,6 +62,20 @@ export function cleanHtml(html: string): string {
 
       if (attrName.startsWith('on')) continue;
 
+      if (attrName === 'style') {
+        const lower = attrValue.toLowerCase();
+        if (
+          lower.includes('javascript:') ||
+          lower.includes('expression(') ||
+          lower.includes('url(') ||
+          lower.includes('@import') ||
+          lower.includes('behavior:') ||
+          lower.includes('-moz-binding')
+        ) {
+          continue;
+        }
+      }
+
       if (!GLOBAL_ATTRS.has(attrName) && !allowedForTag.has(attrName)) continue;
 
       if (attrName === 'href' || attrName === 'src') {
